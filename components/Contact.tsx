@@ -18,7 +18,7 @@ export default function Contattaci() {
     <section className="bg-green-600 py-12">
       <div className="max-w-7xl mx-auto text-center text-white">
         <h2 className="text-4xl font-bold">Contattaci</h2>
-        <p className="mt-4 text-xl">Vuoi conoscere meglio i nostri gatti o prenotare una visita? Scrivici!</p>
+        <p className="mt-4 text-xl">Vuoi conoscere meglio i nostri servizi? Contattaci!</p>
 
         {/* Form */}
         <form onSubmit={handleSubmit} className="mt-8 max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-lg text-gray-900">

@@ -1,35 +1,17 @@
 [
     {
       "id": 1,
-      "nome": "Micio",
-      "sesso": "Maschio",
-      "eta": "3 anni",
+      "nome": "Dennis Turco",
+      "eta": "23",
       "foto": "/public/images/gatto.png",
-      "descrizione": "Un gatto dolce e coccolone, cerca casa!"
+      "descrizione": "12 Anni di esperienza sul campo di Programmazzione"
     },
     {
       "id": 2,
-      "nome": "Luna",
-      "sesso": "Femmina",
-      "eta": "2 anni e 3 mesi",
+      "nome": "Francesco Cassola",
+      "eta": "23",
       "foto": "/public/images/gatto.png",
-      "descrizione": "Curiosa e giocherellona, aspetta la sua famiglia."
-    },
-    {
-      "id": 3,
-      "nome": "Luna",
-      "sesso": "Femmina",
-      "eta": "2 anni e 3 mesi",
-      "foto": "/public/images/gatto.png",
-      "descrizione": "Curiosa e giocherellona, aspetta la sua famiglia."
-    },
-    {
-      "id": 4,
-      "nome": "Luna",
-      "sesso": "Femmina",
-      "eta": "2 anni e 3 mesi",
-      "foto": "/public/images/gatto.png",
-      "descrizione": "Curiosa e giocherellona, aspetta la sua famiglia."
+      "descrizione": "12 Anni di esperienza sul campo Tecnico, Grafico e Commerciale"
     }
   ]
   

@@ -22,7 +22,7 @@ export default async function HomePage() {
       >
         <div className="absolute inset-0 bg-black opacity-40"></div>
         <div className="absolute inset-0 flex justify-center items-center text-center text-white">
-          <h1 className="text-5xl font-extrabold">Benvenuto nel nostro Cat Café</h1>
+          <h1 className="text-5xl font-extrabold">Benvenuto nel nostro sito Demo</h1>
         </div>
       </section>
 
@@ -30,29 +30,25 @@ export default async function HomePage() {
       <section className="max-w-7xl mx-auto py-12 px-6 text-center">
         <h2 className="text-4xl font-bold text-green-600">Chi Siamo</h2>
         <p className="mt-4 text-xl max-w-2xl mx-auto text-gray-600">
-          Il nostro Cat Café è il primo della Emilia Romagna! Un luogo dove puoi goderti una tazza di caffè mentre
-          ti godi la compagnia dei gatti. Siamo anche in collaborazione con l'ENPA, quindi puoi adottare uno dei nostri
-          adorabili gatti!
+          Il nostro sito Demo è il primo della Emilia Romagna!
         </p>
       </section>
 
       {/* Gatti Section (Dinamico) */}
       <section className="bg-white py-12">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-green-600">I Nostri Gatti</h2>
-          <p className="mt-4 text-xl text-gray-600">Incontra alcuni dei gatti disponibili per l'adozione!</p>
+          <h2 className="text-4xl font-bold text-green-600">I Nostri Developer</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
             {gatti.map((gatto) => (
               <div key={gatto.id} className="bg-white shadow-lg rounded-lg p-4">
               <Image src={gatto.foto} width={300} height={200} alt={gatto.nome} className="rounded-lg" />
               <h3 className="mt-4 text-xl font-semibold">{gatto.nome}</h3>
               <ul className="mt-2 text-gray-500 list-disc list-inside text-left">
-                <li><strong>Sesso:</strong> {gatto.sesso}</li>
                 <li><strong>Età:</strong> {gatto.eta} anni</li>
               </ul>
               <p className="mt-2 text-gray-500 text-left">{gatto.descrizione}</p>
-            </div>            
+            </div>           
             ))}
           </div>
         </div>
@@ -69,12 +65,12 @@ export default async function HomePage() {
       <footer className="bg-gray-800 text-white py-12">
         <div className="max-w-7xl mx-auto text-center">
           <h3 className="text-2xl font-semibold">Dove Trovarci</h3>
-          <p className="mt-4 text-xl">Visita il nostro Cat Café! Siamo in Emilia Romagna.</p>
+          <p className="mt-4 text-xl">Vieni a trovarci, siamo a Fidenza (PR).</p>
 
           {/* Google Maps Embed */}
           <div className="mt-8">
             <iframe
-              src="https://www.google.com/maps/embed?pb=YOUR_GOOGLE_MAPS_LINK_HERE"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22624.413195324698!2d10.048936738509!3d44.86124331022442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47805e2460c27007%3A0x896e3cfd8d45d0e3!2s43036%20Fidenza%20PR!5e0!3m2!1sit!2sit!4v1740176152415!5m2!1sit!2sit"
               width="100%"
               height="400"
               style={{ border: 0 }}
