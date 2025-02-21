@@ -1,3 +1,39 @@
+# Configuration and install guide
+## Install Next.js
+1. Open your terminal and run: `npx create-next-app@latest projectname`
+    During setup choose: 
+        
+        1. ✅ TypeScript (Recommended)
+        2. ✅ ESLint
+        3. ❌ No to Tailwind (we’ll install it manually)
+2. Navigate to your project folder: `cd catcafe`
+## Start the Development Server
+1. Once installed, start the Next.js app with: npm run dev
+2. Your site should now be live at http://localhost:3000
+
+## Install Tailwind CSS (Optional, but Recommended) 
+To add Tailwind CSS, run:
+1. npm install -D tailwindcss postcss autoprefixer
+2. npx tailwindcss init -p
+3. Modify tailwind.config.js and add the Next.js file paths:
+    ```js
+    /** @type {import('tailwindcss').Config} */
+    module.exports = {
+    content: ["./app/**/*.{js,ts,jsx,tsx}"],
+    theme: {
+        extend: {},
+    },
+    plugins: [],
+    };
+    ```
+4. Add Tailwind to app/globals.css:
+    ```js
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+    ```
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
