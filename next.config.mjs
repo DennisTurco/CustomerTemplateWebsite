@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
-
-export default nextConfig;
+const nextConfig = {
+    images: {
+      domains: ['e7.pngegg.com'], // Aggiungi il dominio da cui stai cercando di caricare l'immagine
+    },
+  };
+  
+  export default nextConfig;
