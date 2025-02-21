@@ -14,7 +14,7 @@ export default function HomePage() {
       >
         <div className="absolute inset-0 bg-black opacity-40"></div>
         <div className="absolute inset-0 flex justify-center items-center text-center text-white">
-          <h1 className="text-5xl font-extrabold">Benvenuto nel nostro Cat Café</h1>
+          <h1 className="text-5xl font-extrabold">Benvenuto nel nostro sito Demo</h1>
         </div>
       </section>
 
@@ -22,9 +22,7 @@ export default function HomePage() {
       <section className="max-w-7xl mx-auto py-12 px-6 text-center">
         <h2 className="text-4xl font-bold text-green-600">Chi Siamo</h2>
         <p className="mt-4 text-xl max-w-2xl mx-auto text-gray-600">
-          Il nostro Cat Café è il primo della Emilia Romagna! Un luogo dove puoi goderti una tazza di caffè mentre
-          ti godi la compagnia dei gatti. Siamo anche in collaborazione con l'ENPA, quindi puoi adottare uno dei nostri
-          adorabili gatti!
+          Il nostro sito Demo è il primo della Emilia Romagna!
         </p>
       </section>
 
@@ -57,12 +55,12 @@ export default function HomePage() {
       <footer className="bg-gray-800 text-white py-12">
         <div className="max-w-7xl mx-auto text-center">
           <h3 className="text-2xl font-semibold">Dove Trovarci</h3>
-          <p className="mt-4 text-xl">Visita il nostro Cat Café! Siamo in Emilia Romagna.</p>
+          <p className="mt-4 text-xl">Vieni a trovarci, siamo a Fidenza (PR).</p>
 
           {/* Google Maps Embed */}
           <div className="mt-8">
             <iframe
-              src="https://www.google.com/maps/embed?pb=YOUR_GOOGLE_MAPS_LINK_HERE"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22624.413195324698!2d10.048936738509!3d44.86124331022442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47805e2460c27007%3A0x896e3cfd8d45d0e3!2s43036%20Fidenza%20PR!5e0!3m2!1sit!2sit!4v1740176152415!5m2!1sit!2sit"
               width="100%"
               height="400"
               style={{ border: 0 }}
