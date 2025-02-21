@@ -1,11 +1,18 @@
 # Configuration and install guide
+## Install Node.js and npm
+1. Download from: https://nodejs.org/
+2. After the installation check if is it correctly installed:
+    ```
+    node -v
+    npm -v
+    ```
 ## Install Next.js
 1. Open your terminal and run: `npx create-next-app@latest projectname`
     During setup choose: 
         
-        1. ✅ TypeScript (Recommended)
-        2. ✅ ESLint
-        3. ❌ No to Tailwind (we’ll install it manually)
+    1. ✅ TypeScript (Recommended)
+    2. ✅ ESLint
+    3. ❌ No to Tailwind (we’ll install it manually)
 2. Navigate to your project folder: `cd catcafe`
 ## Start the Development Server
 1. Once installed, start the Next.js app with: npm run dev
