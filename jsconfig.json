@@ -2,6 +2,9 @@
   "compilerOptions": {
     "paths": {
       "@/*": ["./*"]
-    }
+    },
+    "jsx": "preserve", 
+    "allowJs": true, 
+    "strict": false
   }
 }
