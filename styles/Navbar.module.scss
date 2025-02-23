@@ -1,21 +1,28 @@
 @use "resolution" as *;
 
 .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 32px var(--page-margin);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: var(--light-cream-100);
-    z-index: 3;
-    @media (min-width: 1440px) {
-      margin: 0 auto;
-      padding: 17px 0;
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 40px; /* Aumentato il padding sui lati */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--light-cream-100);
+  z-index: 3;
+  opacity: 0.8; /* Opacità base */
+  transition: opacity 0.3s ease; /* Aggiungi una transizione per un effetto più fluido */
+  
+  @media (min-width: 1440px) {
+    margin: 0 auto;
+    padding: 17px 40px; /* Aggiunta una maggiore larghezza nei dispositivi più larghi */
   }
+
+  &:hover {
+    opacity: 1; /* Opacità su hover */
+  }
+}
 
 .logo {
   max-width: 33px;

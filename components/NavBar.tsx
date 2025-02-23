@@ -27,7 +27,7 @@ export const Navbar: React.FC = () => {
             <div className={styles.link_container}>
                 <Link href="/"> Home </Link>
                 <Link href="/about"> About us </Link>
-                <Link href="#" onClick={(e) => { e.preventDefault(); openPopup(); }}> Contattaci </Link>
+                <Link href="" onClick={(e) => { e.preventDefault(); openPopup(); }}> Contattaci </Link>
             </div>
 
             {hamburgerClicked ? (
