@@ -18,7 +18,7 @@ export default async function HomePage() {
       {/* Hero Section */}
       <section
         className="relative w-full h-96 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/banner.jpg')" }}
+        style={{ backgroundImage: "url('/images/bannerv2.png')" }}
       >
         <div className="absolute inset-0 bg-black opacity-40"></div>
         <div className="absolute inset-0 flex justify-center items-center text-center text-white">
@@ -28,21 +28,24 @@ export default async function HomePage() {
 
       {/* About Section */}
       <section className="max-w-7xl mx-auto py-12 px-6 text-center">
-        <h2 className="text-4xl font-bold text-green-600">Chi Siamo</h2>
+        <h2 className="text-4xl font-bold text-blue-600">Chi Siamo</h2>
+        <br></br>
         <p className="mt-4 text-xl max-w-2xl mx-auto text-gray-600">
-          Il nostro sito Demo è il primo della Emilia Romagna!
+          Operiamo nel campo Tecnico Informatico da oltre 10 anni, proponiamo tra i nostri servizi l'Assemblaggio di Computer per ogni esignenza, 
+          Progettazzione di siti internet, Progettazione di applicazioni windows, assistenza tecnica e hardware di secondo livello a 360 gradi.
         </p>
+        <br></br>
+        <br></br>
       </section>
 
       {/* Gatti Section (Dinamico) */}
       <section className="bg-white py-12">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-green-600">I Nostri Developer</h2>
-
+          <h2 className="text-4xl font-bold text-blue-600">I Nostri Developer</h2>
+          <br></br>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
             {gatti.map((gatto) => (
               <div key={gatto.id} className="bg-white shadow-lg rounded-lg p-4">
-              <Image src={gatto.foto} width={300} height={200} alt={gatto.nome} className="rounded-lg" />
               <h3 className="mt-4 text-xl font-semibold">{gatto.nome}</h3>
               <ul className="mt-2 text-gray-500 list-disc list-inside text-left">
                 <li><strong>Età:</strong> {gatto.eta} anni</li>
@@ -51,11 +54,12 @@ export default async function HomePage() {
             </div>           
             ))}
           </div>
+          <br></br>
         </div>
       </section>
 
       {/* Contatti */}
-      <section className="bg-green-600 py-12">
+      <section className="bg-blue-600 py-12">
       <div>
         <Contact />
       </div>
@@ -65,7 +69,7 @@ export default async function HomePage() {
       <footer className="bg-gray-800 text-white py-12">
         <div className="max-w-7xl mx-auto text-center">
           <h3 className="text-2xl font-semibold">Dove Trovarci</h3>
-          <p className="mt-4 text-xl">Vieni a trovarci, siamo a Fidenza (PR).</p>
+          <p className="mt-4 text-xl">Vieni a trovarci, siamo a Fidenza (PR) 43036.</p>
 
           {/* Google Maps Embed */}
           <div className="mt-8">
@@ -76,6 +80,19 @@ export default async function HomePage() {
               style={{ border: 0 }}
               loading="lazy"
             ></iframe>
+            <br></br>
+          </div>
+          
+          {/* Contact */}
+          <div className="max-w-7xl mx-auto text-center">
+            <table className="max-w-7xl mx-auto text-center">
+              <thead>
+                <tr>
+                  <th className="max-w-7xl mx-auto text-left">Indirizzo</th>
+                  <th className="max-w-7xl mx-auto text-right">Indirizzo</th>
+                </tr>
+              </thead>
+            </table>
           </div>
         </div>
       </footer>

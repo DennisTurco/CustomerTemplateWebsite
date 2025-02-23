@@ -3,14 +3,12 @@
       "id": 1,
       "nome": "Dennis Turco",
       "eta": "23",
-      "foto": "/public/images/gatto.png",
       "descrizione": "12 Anni di esperienza sul campo di Programmazzione"
     },
     {
       "id": 2,
       "nome": "Francesco Cassola",
       "eta": "23",
-      "foto": "/public/images/gatto.png",
       "descrizione": "12 Anni di esperienza sul campo Tecnico, Grafico e Commerciale"
     }
   ]
