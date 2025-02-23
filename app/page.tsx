@@ -1,18 +1,10 @@
-import Image from "next/image";
-import fs from "fs";
-import path from "path";
 import Contact from "../components/Contact";
+import { Navbar } from "../components/NavBar";
+import Why from "../components/Why";
+import WhyData from "../data/why.js";
+import styles from "../styles/Home.module.scss";
 
-// Funzione per leggere i dati dal file JSON
-async function getGatti() {
-  const filePath = path.join(process.cwd(), "/data/gatti.json"); // Percorso assoluto del file JSON
-  const fileContents = await fs.promises.readFile(filePath, "utf-8");
-  return JSON.parse(fileContents);
-}
-
-export default async function HomePage() {
-  const gatti = await getGatti(); // Carichiamo i dati lato server
-
+export default function HomePage() {
   return (
     <div className="bg-gray-100 text-gray-900">
       {/* Hero Section */}
@@ -38,23 +30,23 @@ export default async function HomePage() {
         <br></br>
       </section>
 
-      {/* Gatti Section (Dinamico) */}
-      <section className="bg-white py-12">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-blue-600">I Nostri Developer</h2>
-          <br></br>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-            {gatti.map((gatto) => (
-              <div key={gatto.id} className="bg-white shadow-lg rounded-lg p-4">
-              <h3 className="mt-4 text-xl font-semibold">{gatto.nome}</h3>
-              <ul className="mt-2 text-gray-500 list-disc list-inside text-left">
-                <li><strong>Età:</strong> {gatto.eta} anni</li>
-              </ul>
-              <p className="mt-2 text-gray-500 text-left">{gatto.descrizione}</p>
-            </div>           
-            ))}
-          </div>
-          <br></br>
+      <section className="bg-green-600 py-12">
+        <Navbar />
+      </section>
+
+      <section className={styles.why_container}>
+        <div className={styles.why_text_content}>
+          <h2>Why choose us?</h2>
+          <p>
+            Because we're easy to work with. We take the work seriously, but
+            not ourselves. We're not prickly, precious or pretentious.
+            <br />- abccopywriting
+          </p>
+        </div>
+        <div className={styles.why_card_container}>
+          {WhyData.data.map((data, key) => (
+            <Why key={key} {...data} />
+          ))}
         </div>
       </section>
 
@@ -62,7 +54,6 @@ export default async function HomePage() {
       <section className="bg-blue-600 py-12">
       <div>
         <Contact />
-      </div>
       </section>
 
       {/* Footer con Google Maps */}

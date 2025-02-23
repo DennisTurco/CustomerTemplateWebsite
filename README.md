@@ -1,19 +1,21 @@
 # Configuration and install guide
 ## Install Node.js and npm
 1. Download from: https://nodejs.org/
-2. After the installation check if is it correctly installed:
-    ```
+2. Set-ExecutionPolicy Unrestricted
+3. `npm install`
+4. After the installation check if is it correctly installed:
+    ```powershell
     node -v
     npm -v
     ```
 ## Install Next.js
 1. Open your terminal and run: `npx create-next-app@latest projectname`
     During setup choose: 
-        
     1. ✅ TypeScript (Recommended)
     2. ✅ ESLint
     3. ❌ No to Tailwind (we’ll install it manually)
 2. Navigate to your project folder: `cd catcafe`
+
 ## Start the Development Server
 1. Once installed, start the Next.js app with: npm run dev
 2. Your site should now be live at http://localhost:3000
@@ -40,8 +42,15 @@ To add Tailwind CSS, run:
     @tailwind utilities;
     ```
 
-
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## Packages
+* npm install react-icons
+* npm install sass
+
+---
+---
+---
 
 ## Getting Started
 
@@ -49,12 +58,6 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
