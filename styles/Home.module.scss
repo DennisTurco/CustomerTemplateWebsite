@@ -124,6 +124,7 @@
 .why_text_content {
   padding-top: 44px;
   margin-bottom: 54px;
+  color: var(--dark-greyblue-900);
   @include flex-column-center;
   @media (min-width: $media-desktop) {
     margin-bottom: 86px;

@@ -22,7 +22,7 @@ export const Footer = () => {
                     ABOUT US
                 </Link>
                 <Link href="/buy-coffee">
-                    Buy Coffee
+                    Contattaci
                 </Link>
             </div>
             <div className={styles.social_container}>

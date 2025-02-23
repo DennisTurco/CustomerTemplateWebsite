@@ -1,13 +1,20 @@
 @use "reset" as *;
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Fraunces:wght@900&display=swap");
 
 // Colors and Values
-
 $media-tablet: 768px;
 $media-desktop: 140px;
 
 :root {
+  // Definizione delle variabili PRIMA degli annidamenti
+  --background: #ffffff;
+  --foreground: #171717;
+
   --dark-greyblue-900: #333d4b;
   --dark-cyan-600: #0e8784;
   --light-cyan-600: #00b8b8;
@@ -16,32 +23,31 @@ $media-desktop: 140px;
   --light-cream-100: #fefcf7;
   --yellow-thunder-500: #f9d851;
 
-  //headings
   --xl-header-fs: 40px;
   --md-header-fs: 28px;
   --xs-header-fs: 24px;
-
-  //body
   --lg-body-fs: 16px;
   --md-body-fs: 15px;
   --sm-link-fs: 12px;
 
-  //margin and containers
   --page-margin: 24px;
   --page-container: 1200px;
-
-  //media queris
   --media-tablet: 768px;
   --media-desktop: 1140px;
 
-  @media (min-width: $media-tablet) {
+  @media (prefers-color-scheme: dark) {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+
+  @media (min-width: 768px) {
     --xl-header-fs: 48px;
     --md-header-fs: 32px;
     --xs-header-fs: 24px;
-    --page-margin: 40px;
+    --page-margin: 100px;
   }
 
-  @media (min-width: $media-desktop) {
+  @media (min-width: 1140px) {
     --xl-header-fs: 72px;
     --md-header-fs: 40px;
     --md-body-fs: 16px;
@@ -49,8 +55,14 @@ $media-desktop: 140px;
   }
 }
 
-// Typography
+// Global styles
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
 
+// Typography
 h1,
 h2,
 h3,
@@ -92,15 +104,7 @@ a {
   }
 }
 
-// section,
-// footer {
-//   margin: 0 var(--page-margin);
-//   @media (min-width: 1440px) {
-//     margin: 0 auto;
-//     max-width: 1280px;
-//   }
-// }
-
+// Buttons
 .button-primary {
   width: 217px;
   height: 56px;
@@ -111,7 +115,6 @@ a {
   border: none;
   cursor: pointer;
   border-radius: 5px;
-  font-size: 18;
   &:hover {
     background-color: #66d2cf;
   }
@@ -120,6 +123,7 @@ a {
   }
 }
 
+// Utility classes
 .alternate-title {
   text-align: center;
   background-image: linear-gradient(

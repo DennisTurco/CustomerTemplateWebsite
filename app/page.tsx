@@ -1,5 +1,6 @@
 import Contact from "../components/Contact";
 import { Navbar } from "../components/NavBar";
+import { Footer } from "../components/Footer";
 import Why from "../components/Why";
 import WhyData from "../data/why.js";
 import styles from "../styles/Home.module.scss";
@@ -7,6 +8,7 @@ import styles from "../styles/Home.module.scss";
 export default function HomePage() {
   return (
     <div className="bg-gray-100 text-gray-900">
+
       {/* Hero Section */}
       <section
         className="relative w-full h-96 bg-cover bg-center"
@@ -30,9 +32,12 @@ export default function HomePage() {
         <br></br>
       </section>
 
-      <section className="bg-green-600 py-12">
+      <section>
         <Navbar />
       </section>
+
+      {/* <section className="bg-green-600 py-12">
+      </section> */}
 
       <section className={styles.why_container}>
         <div className={styles.why_text_content}>
@@ -50,8 +55,11 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* <section className="bg-green-600 py-12">
+      </section> */}
+
       {/* Contatti */}
-      <section className="bg-blue-600 py-12">
+      <section>
         <Contact />
       </section>
 
@@ -85,6 +93,9 @@ export default function HomePage() {
             </table>
           </div>
         </div>
+
+          <Footer/>
+
       </footer>
     </div>
   );
