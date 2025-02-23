@@ -52,7 +52,6 @@ export default function HomePage() {
 
       {/* Contatti */}
       <section className="bg-blue-600 py-12">
-      <div>
         <Contact />
       </section>
 

@@ -1,8 +1,10 @@
 "use client";
 import { useState } from "react";
+import styles from "/styles/Contact.module.scss";
 
-export default function Contattaci() {
+export default function Contacts() {
   const [formData, setFormData] = useState({ nome: "", email: "", messaggio: "" });
+  const [isOpen, setIsOpen] = useState(true); // Stato per gestire la visibilità del popup
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -10,66 +12,43 @@ export default function Contattaci() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Messaggio inviato correttamente! Verrai contattato quanto prima.");
+    alert("Messaggio inviato! Ti risponderemo presto.");
     setFormData({ nome: "", email: "", messaggio: "" });
+    setIsOpen(false); // Chiude il popup dopo l'invio
   };
 
   return (
-    <section className="bg-blue-600 py-12">
-      <div className="max-w-7xl mx-auto text-center text-black">
-        <h2 className="text-4xl font-bold text-white">Contattaci</h2>
-        <p className="mt-2 text-xl text-white">Vuoi conoscere meglio i nostri servizi? Contattaci!</p>
+    <>
+      {isOpen && (
+        <div className={styles.container}>
+          <div className={styles.wrapper}>
+            <h2 className={styles.title}>Contattaci</h2>
+            <p className={styles.subtitle}>Vuoi conoscere meglio i nostri servizi? Scrivici!</p>
 
-        {/* Form */}
-        <form onSubmit={handleSubmit} className="mt-8 max-w-3xl mx-auto bg-blue p-6 rounded-lg text-grey-900">
-          <div className="mb-4">
-            <label htmlFor="nome" className="block text-lg font-semibold text-white">Nome</label>
-            <input
-              type="text"
-              id="nome"
-              name="nome"
-              value={formData.nome}
-              onChange={handleChange}
-              required
-              className="mt-1 p-3 w-full border rounded-lg focus:ring focus:ring-blue-400"
-              placeholder=" Nome e Cognome / Ragione Sociale"
-            />
+            <form onSubmit={handleSubmit} className={styles.form}>
+              <div className={styles.formGroup}>
+                <label htmlFor="nome">Nome</label>
+                <input type="text" id="nome" name="nome" value={formData.nome} onChange={handleChange} required />
+              </div>
+
+              <div className={styles.formGroup}>
+                <label htmlFor="email">Email</label>
+                <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
+              </div>
+
+              <div className={styles.formGroup}>
+                <label htmlFor="messaggio">Messaggio</label>
+                <textarea id="messaggio" name="messaggio" value={formData.messaggio} onChange={handleChange} required rows={5}></textarea>
+              </div>
+
+              <button type="submit" className={styles.button}>Invia Messaggio</button>
+            </form>
+
+            {/* Bottone per chiudere il popup */}
+            <button className={styles.closeButton} onClick={() => setIsOpen(false)}>Chiudi</button>
           </div>
-
-          <div className="mb-4">
-            <label htmlFor="email" className="block text-lg font-semibold text-white">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className="mt-1 p-3 w-full border rounded-lg focus:ring focus:ring-blue-400"
-              placeholder=" Indirizzo email"
-            />
-          </div>
-
-          <div className="mb-4">
-            <label htmlFor="messaggio" className="block text-lg font-semibold text-white">Messaggio</label>
-            <textarea
-              id="messaggio"
-              name="messaggio"
-              value={formData.messaggio}
-              onChange={handleChange}
-              required
-              className="mt-1 p-3 w-full border rounded-lg focus:ring focus:ring-blue-400"
-              placeholder=" Scrivi il tuo Messaggio..."
-              rows={4}
-            ></textarea>
-          </div>
-
-          <button type="submit" className="bg-white-600 text-white px-6 py-3 rounded-lg shadow-lg font-bold">
-          <br></br>
-            Invia
-          </button> 
-        </form>
-      </div>
-    </section>
+        </div>
+      )}
+    </>
   );
 }

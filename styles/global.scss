@@ -1,11 +1,11 @@
+@use "reset" as *;
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Fraunces:wght@900&display=swap");
 
 // Colors and Values
 
-@use "reset" as *;
-
 $media-tablet: 768px;
-$media-desktop: 1140px;
+$media-desktop: 140px;
 
 :root {
   --dark-greyblue-900: #333d4b;
@@ -45,13 +45,8 @@ $media-desktop: 1140px;
     --xl-header-fs: 72px;
     --md-header-fs: 40px;
     --md-body-fs: 16px;
-    --page-margin: 80px;
+    --page-margin: 10px;
   }
-}
-
-body {
-  background-color: var(--light-cream-100);
-  color: var(--dark-greyblue-900);
 }
 
 // Typography
@@ -97,14 +92,14 @@ a {
   }
 }
 
-section,
-footer {
-  margin: 0 var(--page-margin);
-  @media (min-width: 1440px) {
-    margin: 0 auto;
-    max-width: 1280px;
-  }
-}
+// section,
+// footer {
+//   margin: 0 var(--page-margin);
+//   @media (min-width: 1440px) {
+//     margin: 0 auto;
+//     max-width: 1280px;
+//   }
+// }
 
 .button-primary {
   width: 217px;
@@ -122,35 +117,6 @@ footer {
   }
   &:disabled {
     background-color: #e2dedb;
-  }
-}
-
-.button-secondary {
-  width: 217px;
-  height: 56px;
-  background-color: var(--dark-greyblue-900);
-  color: var(--light-cream-100);
-  font-size: 18px;
-  transition: 0.2s all linear;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 18;
-  &:hover {
-    background-color: #000000;
-  }
-  &:disabled {
-    background-color: #be641e;
-  }
-}
-
-.white-image {
-  background-image: url(/assets/shared/white-image.jpg);
-  @media (min-width: $media-tablet) {
-    background-image: url(/assets/shared/white-image.jpg);
-  }
-  @media (min-width: $media-desktop) {
-    background-image: url(/assets/shared/white-image.jpg);
   }
 }
 
