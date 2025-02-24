@@ -123,6 +123,21 @@ a {
   }
 }
 
+.button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: var(--dark-cyan-600);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+
+  &:hover {
+      background: var(--light-cyan-600);
+  }
+}
+
 // Utility classes
 .alternate-title {
   text-align: center;

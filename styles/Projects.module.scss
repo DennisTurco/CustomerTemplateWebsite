@@ -1,0 +1,65 @@
+@use "resolution" as *;
+
+.projectSection {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.sectionTitle {
+    font-size: var(--xl-header-fs);
+    font-weight: 700;
+    color: var(--dark-greyblue-900);
+    margin-bottom: 20px;
+}
+
+.projectGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+}
+
+.card {
+    background: var(--light-cream-100);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.title {
+    font-size: var(--md-header-fs);
+    margin: 10px 0;
+}
+
+.description {
+    font-size: var(--md-body-fs);
+    color: var(--medium-grey-400);
+}
+
+.button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: var(--dark-cyan-600);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+
+    &:hover {
+        background: var(--light-cyan-600);
+    }
+}

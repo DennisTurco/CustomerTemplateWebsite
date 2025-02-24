@@ -3,10 +3,15 @@ import { Footer } from "../components/Footer";
 import Why from "../components/Why";
 import WhyData from "../data/why.js";
 import styles from "../styles/Home.module.scss";
+import MapsPosition from "../components/MapsPosition";
+import Projects from "../components/Projects";
 
 export default function HomePage() {
     return (
         <div className="bg-gray-100 text-gray-900">
+
+            {/* Navbar */}
+            <div><Navbar /></div>
 
             {/* Hero Section */}
             <section
@@ -35,9 +40,7 @@ export default function HomePage() {
                 <br></br>
             </section>
 
-            <section>
-                <Navbar />
-            </section>
+            <div><Projects /></div>
 
             {/* <section className="bg-green-600 py-12"> </section> */}
 
@@ -59,40 +62,11 @@ export default function HomePage() {
 
             {/* <section className="bg-green-600 py-12"> </section> */}
 
-            {/* Footer con Google Maps */}
-            <footer className="bg-gray-800 text-white py-12">
-                <div className="max-w-7xl mx-auto text-center">
-                    <h3 className="text-2xl font-semibold">Dove Trovarci</h3>
-                    <p className="mt-4 text-xl">Vieni a trovarci, siamo a Fidenza (PR) 43036.</p>
+            {/* Google Maps */}
+            <div> <MapsPosition /> </div>
 
-                    {/* Google Maps Embed */}
-                    <div className="mt-8">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22624.413195324698!2d10.048936738509!3d44.86124331022442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47805e2460c27007%3A0x896e3cfd8d45d0e3!2s43036%20Fidenza%20PR!5e0!3m2!1sit!2sit!4v1740176152415!5m2!1sit!2sit"
-                            width="100%"
-                            height="400"
-                            style={{ border: 0 }}
-                            loading="lazy"
-                        ></iframe>
-                        <br></br>
-                    </div>
-
-                    {/* Contact */}
-                    <div className="max-w-7xl mx-auto text-center">
-                        <table className="max-w-7xl mx-auto text-center">
-                            <thead>
-                                <tr>
-                                    <th className="max-w-7xl mx-auto text-left">Indirizzo</th>
-                                    <th className="max-w-7xl mx-auto text-right">Indirizzo</th>
-                                </tr>
-                            </thead>
-                        </table>
-                    </div>
-                </div>
-
-                <Footer />
-
-            </footer>
+            {/* Footer */}
+            <div> <Footer /> </div>
         </div>
     );
 }

@@ -1,0 +1,27 @@
+@use "resolution" as *;
+
+.footer {
+    background-color: #1f2937;
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.text {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+}
+
+.mapContainer {
+    margin-top: 2rem;
+}
