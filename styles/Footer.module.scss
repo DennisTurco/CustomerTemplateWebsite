@@ -1,62 +1,68 @@
-@use "resolution" as *;
-
-.container {
-  background-color: var(--dark-greyblue-900);
-  @include flex-column-center;
-  padding: 54px;
-  @media (min-width: $media-desktop) {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 47px 85px;
-  }
+.footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Allinea gli elementi verticalmente */
+  align-items: center; /* Centra tutto */
 }
 
 .logo {
+  margin-bottom: 15px;
   color: white;
-  max-width: 33px;
-  max-height: 218px;
-  @media (min-width: $media-tablet) {
-    max-width: 26px;
-    max-height: 236px;
-  }
 }
 
 .links_container {
-  @include flex-column-center;
-  font-size: var(--md-body-fs);
-  margin: 48.5px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+
   a {
     color: white;
-    margin-bottom: 24px;
-  }
-  @media (min-width: $media-tablet) {
-    flex-direction: row;
-    justify-content: space-between;
-    width: 285px;
-    margin: 32px 0 65px;
-  }
-  @media (min-width: $media-desktop) {
-    margin: 0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
 
-    a {
-      margin: 0;
+    &:hover {
+      color: #f4a261;
     }
   }
 }
 
 .social_container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 0 auto;
-  width: 140px;
-  @media (min-width: $media-desktop) {
-    margin: 0;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+
+  .social_link {
+    color: white;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 }
 
-.social_link {
-  color: white;
-  margin-bottom: 9px;
-  align-items: center;
+/* Assicura che il copyright sia centrato e sotto al resto */
+.copyright_wrapper {
+  width: 100%; /* Fa sì che occupi tutta la larghezza del footer */
+  margin-top: 20px;
+}
+
+.copyright {
+  padding: 10px 0;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 100%;
+  text-align: center;
+  
+  a {
+    color: #f4a261;
+    text-decoration: none;
+    font-weight: bold;
+  }
 }

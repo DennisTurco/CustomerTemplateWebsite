@@ -1,9 +1,11 @@
+import styles from "/styles/Hero.module.scss";
+
 const Hero = () => {
     return (
         <section
             className="relative w-full h-96 bg-cover bg-center"
             style={{
-                backgroundImage: "url('/images/bannerv2.png')",
+                backgroundImage: "url('/images/bannerv2.png')"
             }}
             >
             <div className="absolute inset-0 bg-black opacity-40"></div>
