@@ -11,8 +11,8 @@
   right: 0;
   background-color: var(--light-cream-100);
   z-index: 3;
-  opacity: 0.8; /* Opacità base */
-  transition: opacity 0.3s ease; /* Aggiungi una transizione per un effetto più fluido */
+  opacity: 1; /* Opacità base */
+  // transition: opacity 0.3s ease; /* Aggiungi una transizione per un effetto più fluido */
   
   @media (min-width: 1440px) {
     margin: 0 auto;
