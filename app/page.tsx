@@ -4,7 +4,6 @@ import Why from "../components/Why";
 import WhyData from "../data/why.js";
 import styles from "../styles/Home.module.scss";
 import MapsPosition from "../components/MapsPosition";
-import Projects from "../components/Projects";
 
 export default function HomePage() {
     return (
@@ -39,8 +38,6 @@ export default function HomePage() {
                 <br></br>
                 <br></br>
             </section>
-
-            <div><Projects /></div>
 
             {/* <section className="bg-green-600 py-12"> </section> */}
 
