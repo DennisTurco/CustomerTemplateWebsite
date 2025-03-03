@@ -1,5 +1,6 @@
 import { Navbar } from "../components/NavBar";
 import { Footer } from "../components/Footer";
+import GattiSection from "../components/GattiSection";
 import Hero from "../components/Hero";
 import Why from "../components/Why";
 import WhyData from "../data/why.js";
@@ -27,6 +28,8 @@ export default function HomePage() {
                 <br></br>
                 <br></br>
             </section>
+
+            <div><GattiSection /></div>
 
             {/* <section className="bg-green-600 py-12"> </section> */}
 

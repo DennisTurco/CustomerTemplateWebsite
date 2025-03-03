@@ -1,0 +1,66 @@
+.gattiSection {
+    background-color: #fff;
+    padding: 3rem 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #16a34a;
+}
+
+.subtitle {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #6b7280;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted min-width */
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: left;
+    max-width: 320px; /* Set a maximum width for the card */
+    margin: 0 auto; /* Center the card inside the grid */
+}
+
+.image {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    max-width: 300px; /* Max width of the image */
+    max-height: 200px; /* Max height of the image */
+    object-fit: cover; /* Ensure the image is cropped and doesn't stretch */
+}
+
+.name {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.details {
+    margin-top: 0.5rem;
+    color: #6b7280;
+    list-style: none;
+    padding: 0;
+}
+
+.description {
+    margin-top: 1rem;
+    color: #6b7280;
+}

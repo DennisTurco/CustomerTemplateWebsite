@@ -47,6 +47,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ## Packages
 * npm install react-icons
 * npm install sass
+* npm install -g @sanity/client
 
 ---
 ---
@@ -56,11 +57,13 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 First, run the development server:
 
+Run the project
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* Website [http://localhost:3000](http://localhost:3000)
+* Sanity control panel [http://localhost:3000/studio](http://localhost:3000)
 
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
@@ -80,3 +83,37 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+## Init Sanity
+```bash
+PS C:\Users\Utente\Desktop\Dennis\Programmazione\CustomerTemplateWebsite> sanity init
+⚠ No authentication credentials found in your Sanity config
+
+? Please log in or create a new account E-mail / password
+
+Opening browser at https://api.sanity.io/v1/auth/login/sanity?type=token&label=DESKTOP-5IB8D1L+%2F+Windows&origin=http%3A%2F%2Flocalhost%3A4321%2Fcallback
+
+✓ Login successful
+✓ Fetching existing projects
+
+? Project name: customerTemplateWebsite
+Your content will be stored in a dataset that can be public or private, depending on
+whether you want to query your content with or without authentication.
+The default dataset configuration has a public dataset named "production".
+? Use the default dataset configuration? Yes
+✓ Creating dataset
+? Would you like to add configuration files for a Sanity project in this Next.js folder? Yes
+⚠ ╭────────────────────────────────────────────────────────────╮
+⚠ │                                                            │
+⚠ │ It looks like you are using Next.js 15 and React 19        │
+⚠ │ Please read our compatibility guide.                       │
+⚠ │ https://www.sanity.io/help/react-19                        │
+⚠ │                                                            │
+⚠ ╰────────────────────────────────────────────────────────────╯
+? Do you want to use TypeScript? Yes
+? Would you like an embedded Sanity Studio? Yes
+? What route do you want to use for the Studio? /studio
+? Select project template to use Clean project with no predefined schema types    
+? Would you like to add the project ID and dataset to your .env.local file? Yes
+```
