@@ -45,9 +45,19 @@ To add Tailwind CSS, run:
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Packages
-* npm install react-icons
-* npm install sass
-* npm install -g @sanity/client
+* `npm install react-icons`
+* `npm install sass`
+* `npm install -g @sanity/client`
+
+## Sanity Configuration
+* Check if sanity is installed: `sanity --version` or `npx sanity --version`
+* Login to sanity: `npx sanity login`
+* Check if project is binded: `npx sanity projects list`
+* Add a new file from the root of the project named ".env.local" with the following content:
+    ```txt
+    NEXT_PUBLIC_SANITY_PROJECT_ID="project_id"
+    NEXT_PUBLIC_SANITY_DATASET="production"
+    ```
 
 ---
 ---
