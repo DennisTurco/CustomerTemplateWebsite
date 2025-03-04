@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { Navbar } from "../components/NavBar";
 import { Footer } from "../components/Footer";
 import GattiSection from "../components/GattiSection";
@@ -6,70 +9,67 @@ import Why from "../components/Why";
 import WhyData from "../data/why.js";
 import styles from "../styles/Home.module.scss";
 import MapsPosition from "../components/MapsPosition";
-import sanityClient from '@sanity/client'; 
+import sanityClient from "@sanity/client";
 
-// Configura il client Sanity
+const fadeIn = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+};
+
 const client = sanityClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
-  useCdn: true, // Usa CDN per migliorare le performance
+  useCdn: true,
 });
 
-const query = `*[_type == "aboutSection"][0]{
-    title,
-    description
-  }`;
-  
+const query = `*[_type == "aboutSection"][0]{ title, description }`;
 const aboutData = await client.fetch(query);
 
 export default function HomePage() {
-    return (
-        <div className="bg-gray-100 text-gray-900">
+  return (
+    <div className="bg-gray-100 text-gray-900">
+      {/* Navbar */}
+      <motion.div initial="hidden" animate="visible" variants={fadeIn}>
+        <Navbar />
+      </motion.div>
 
-            {/* Navbar */}
-            <div><Navbar /></div>
+      {/* Hero Section */}
+      <motion.section initial="hidden" whileInView="visible" variants={fadeIn} viewport={{ once: true }}>
+        <Hero3 />
+      </motion.section>
 
-            {/* Hero Section */}
-            <section><Hero3 /></section>
+      {/* About Section */}
+      <motion.section className="max-w-7xl mx-auto py-12 px-6 text-center" initial="hidden" whileInView="visible" variants={fadeIn} viewport={{ once: true }}>
+        <h2 className="text-4xl font-bold text-blue-600">{aboutData.title}</h2>
+        <p className="mt-4 text-xl max-w-2xl mx-auto text-gray-600">{aboutData.description}</p>
+      </motion.section>
 
-            {/* About Section */}
-            <section className="max-w-7xl mx-auto py-12 px-6 text-center">
-            <h2 className="text-4xl font-bold text-blue-600">{aboutData.title}</h2>
-            <br />
-            <p className="mt-4 text-xl max-w-2xl mx-auto text-gray-600">
-                {aboutData.description}
-            </p>
-            <br />
-            <br />
-            </section>
+      <motion.div initial="hidden" whileInView="visible" variants={fadeIn} viewport={{ once: true }}>
+        <GattiSection />
+      </motion.div>
 
-            <div><GattiSection /></div>
-
-            {/* <section className="bg-green-600 py-12"> </section> */}
-
-            <section className={styles.why_container}>
-                <div className={styles.why_text_content}>
-                    <h2>Why choose us?</h2>
-                    <p>
-                        Because we're easy to work with. We take the work seriously, but
-                        not ourselves. We're not prickly, precious or pretentious.
-                        <br />- abccopywriting
-                    </p>
-                </div>
-                <div className={styles.why_card_container}>
-                    {WhyData.data.map((data, key) => (
-                        <Why key={key} {...data} />
-                    ))}
-                </div>
-            </section>
-
-            {/* <section className="bg-green-600 py-12"> </section> */}
-
-            {/* Google Maps */}
-            <div> <MapsPosition /> </div>
-
-            {/* Footer */}
-            <div> <Footer /> </div>
+      {/* Why Section */}
+      <motion.section className={styles.why_container} initial="hidden" whileInView="visible" variants={fadeIn} viewport={{ once: true }}>
+        <div className={styles.why_text_content}>
+          <h2>Why choose us?</h2>
+          <p>Because we're easy to work with...</p>
         </div>
-    );
+        <div className={styles.why_card_container}>
+          {WhyData.data.map((data, key) => (
+            <Why key={key} {...data} />
+          ))}
+        </div>
+      </motion.section>
+
+      {/* Google Maps */}
+      <motion.div initial="hidden" whileInView="visible" variants={fadeIn} viewport={{ once: true }}>
+        <MapsPosition />
+      </motion.div>
+
+      {/* Footer */}
+      <motion.div initial="hidden" whileInView="visible" variants={fadeIn} viewport={{ once: true }}>
+        <Footer />
+      </motion.div>
+    </div>
+  );
 }
