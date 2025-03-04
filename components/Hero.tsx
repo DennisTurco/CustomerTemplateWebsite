@@ -45,6 +45,8 @@ const Hero = () => {
             <div className={styles.scrollDown}>
                 <FaChevronDown />
             </div>
+
+            <div className={styles.arrow} ><img src="/gifs/animation1.gif"></img></div>
         </section>
     );
 };

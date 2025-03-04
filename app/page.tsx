@@ -1,7 +1,7 @@
 import { Navbar } from "../components/NavBar";
 import { Footer } from "../components/Footer";
 import GattiSection from "../components/GattiSection";
-import Hero from "../components/Hero";
+import Hero3 from "../components/Hero3";
 import Why from "../components/Why";
 import WhyData from "../data/why.js";
 import styles from "../styles/Home.module.scss";
@@ -30,7 +30,7 @@ export default function HomePage() {
             <div><Navbar /></div>
 
             {/* Hero Section */}
-            <section><Hero /></section>
+            <section><Hero3 /></section>
 
             {/* About Section */}
             <section className="max-w-7xl mx-auto py-12 px-6 text-center">
