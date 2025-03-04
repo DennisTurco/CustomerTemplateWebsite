@@ -1,41 +1,33 @@
 import { type SchemaTypeDefinition } from 'sanity';
 
 const projects: SchemaTypeDefinition = {
-  name: 'projects',
-  title: 'Lista Progetti',
+  name: 'project',
+  title: 'Project',
   type: 'document',
   fields: [
     {
-      name: 'nome',
-      title: 'Nome',
+      name: 'imageURL',
+      title: 'Image URL',
+      type: 'url',
+      description: 'URL of the project image',
+    },
+    {
+      name: 'title',
+      title: 'Title',
       type: 'string',
+      description: 'Title of the project',
     },
     {
-      name: 'sesso',
-      title: 'Sesso',
-      type: 'string',
-      options: {
-        list: [
-          { title: 'Maschio', value: 'Maschio' },
-          { title: 'Femmina', value: 'Femmina' },
-        ],
-      },
-    },
-    {
-      name: 'eta',
-      title: 'Età',
-      type: 'string',
-    },
-    {
-      name: 'foto',
-      title: 'Foto',
-      type: 'image',
-      options: { hotspot: true },
-    },
-    {
-      name: 'descrizione',
-      title: 'Descrizione',
+      name: 'description',
+      title: 'Description',
       type: 'text',
+      description: 'Description of the project',
+    },
+    {
+      name: 'link',
+      title: 'Link',
+      type: 'url',
+      description: 'Link to the project website or page',
     },
   ],
 };

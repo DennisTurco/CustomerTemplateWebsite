@@ -1,43 +1,48 @@
 import { type SchemaTypeDefinition } from 'sanity';
 
 const menu: SchemaTypeDefinition = {
-  name: 'Menu',
-  title: 'Lista Menu',
+  name: 'menuItem',
+  title: 'Menu Item',
   type: 'document',
   fields: [
     {
-      name: 'nome',
-      title: 'Nome',
+      name: 'imageURL',
+      title: 'Image URL',
+      type: 'url',
+      description: 'URL of the menu item image',
+    },
+    {
+      name: 'name',
+      title: 'Name',
       type: 'string',
+      description: 'Name of the dish',
     },
     {
-      name: 'sesso',
-      title: 'Sesso',
-      type: 'string',
-      options: {
-        list: [
-          { title: 'Maschio', value: 'Maschio' },
-          { title: 'Femmina', value: 'Femmina' },
-        ],
-      },
-    },
-    {
-      name: 'eta',
-      title: 'Età',
-      type: 'string',
-    },
-    {
-      name: 'foto',
-      title: 'Foto',
-      type: 'image',
-      options: { hotspot: true },
-    },
-    {
-      name: 'descrizione',
-      title: 'Descrizione',
+      name: 'description',
+      title: 'Description',
       type: 'text',
+      description: 'Description of the dish',
+    },
+    {
+      name: 'price',
+      title: 'Price',
+      type: 'string',
+      description: 'Price of the dish (e.g., €12.00)',
+    },
+    {
+      name: 'allergens',
+      title: 'Allergens',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: [{ type: 'allergen' }], // Referenza ai documenti allergeni
+        },
+      ],
+      description: 'List of allergens for the dish',
     },
   ],
 };
+
 
 export default menu;

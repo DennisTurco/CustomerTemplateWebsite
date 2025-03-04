@@ -6,6 +6,21 @@ import Why from "../components/Why";
 import WhyData from "../data/why.js";
 import styles from "../styles/Home.module.scss";
 import MapsPosition from "../components/MapsPosition";
+import sanityClient from '@sanity/client'; 
+
+// Configura il client Sanity
+const client = sanityClient({
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
+  useCdn: true, // Usa CDN per migliorare le performance
+});
+
+const query = `*[_type == "aboutSection"][0]{
+    title,
+    description
+  }`;
+  
+const aboutData = await client.fetch(query);
 
 export default function HomePage() {
     return (
@@ -19,14 +34,13 @@ export default function HomePage() {
 
             {/* About Section */}
             <section className="max-w-7xl mx-auto py-12 px-6 text-center">
-                <h2 className="text-4xl font-bold text-blue-600">Chi Siamo</h2>
-                <br></br>
-                <p className="mt-4 text-xl max-w-2xl mx-auto text-gray-600">
-                    Operiamo nel campo Tecnico Informatico da oltre 10 anni, proponiamo tra i nostri servizi l'Assemblaggio di Computer per ogni esignenza,
-                    Progettazzione di siti internet, Progettazione di applicazioni windows, assistenza tecnica e hardware di secondo livello a 360 gradi.
-                </p>
-                <br></br>
-                <br></br>
+            <h2 className="text-4xl font-bold text-blue-600">{aboutData.title}</h2>
+            <br />
+            <p className="mt-4 text-xl max-w-2xl mx-auto text-gray-600">
+                {aboutData.description}
+            </p>
+            <br />
+            <br />
             </section>
 
             <div><GattiSection /></div>

@@ -1,6 +1,6 @@
 import { type SchemaTypeDefinition } from 'sanity';
 
-const gatti: SchemaTypeDefinition = {
+const cats: SchemaTypeDefinition = {
   name: 'gatti',
   title: 'Lista Gatti',
   type: 'document',
@@ -40,4 +40,4 @@ const gatti: SchemaTypeDefinition = {
   ],
 };
 
-export default gatti;
+export default cats;
