@@ -23,10 +23,11 @@
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted min-width */
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Lascia invariato il min-width */
+    gap: 1rem; /* Riduci questo valore per meno spazio tra le card */
     margin-top: 2rem;
 }
+
 
 .card {
     background: white;
