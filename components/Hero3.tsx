@@ -3,8 +3,7 @@
 import styles from "/styles/Hero3.module.scss";
 import { FaChevronDown } from "react-icons/fa";
 
-const Hero3 = () => {
-
+const Hero = () => {
     return (
         <section
             className={styles.heroSection}>
@@ -33,4 +32,4 @@ const Hero3 = () => {
     );
 };
 
-export default Hero3;
+export default Hero;

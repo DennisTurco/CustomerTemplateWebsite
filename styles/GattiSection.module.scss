@@ -23,11 +23,24 @@
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Lascia invariato il min-width */
-    gap: 1rem; /* Riduci questo valore per meno spazio tra le card */
+    grid-template-columns: repeat(3, 1fr); /* 3 colonne */
+    gap: 0.5rem; /* Riduci lo spazio tra le card */
     margin-top: 2rem;
 }
 
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colonne per schermi più piccoli */
+        gap: 0.5rem; /* Mantieni uno spazio ravvicinato anche sui dispositivi più piccoli */
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr; /* 1 colonna per schermi molto piccoli */
+        gap: 0.5rem; /* Stessa cosa qui, ridotto lo spazio tra le card */
+    }
+}
 
 .card {
     background: white;

@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 
-export const Footer2 = () => {
+export const Footer = () => {
     return (
     <footer style={styles.footer}>
       <div style={styles.container}>
