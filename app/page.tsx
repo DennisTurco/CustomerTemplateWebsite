@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Navbar } from "../components/NavBar";
-import { Footer } from "../components/Footer";
+import { Footer2 } from "../components/Footer2";
 import GattiSection from "../components/GattiSection";
 import Hero3 from "../components/Hero3";
 import Why from "../components/Why";
@@ -68,7 +68,7 @@ export default function HomePage() {
 
       {/* Footer */}
       <motion.div initial="hidden" whileInView="visible" variants={fadeIn} viewport={{ once: true }}>
-        <Footer />
+        <Footer2 />
       </motion.div>
     </div>
   );

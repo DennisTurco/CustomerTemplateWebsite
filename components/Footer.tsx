@@ -24,8 +24,7 @@ export const Footer = () => {
                 <Link href="/"><RiTwitterLine size={32} className={styles.social_link} /></Link>
             </div>
 
-            {/* Il copyright ora avrà la larghezza del footer e sarà centrato */}
-            <div className={styles.copyright_wrapper}>
+           <div className={styles.copyright_wrapper}>
                 <Copyright />
             </div>
         </footer>

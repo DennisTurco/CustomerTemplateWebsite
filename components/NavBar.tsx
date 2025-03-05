@@ -28,6 +28,7 @@ export const Navbar: React.FC = () => {
                 <Link href="/"> Home </Link>
                 <Link href="/Projects"> Progetti </Link>
                 <Link href="/Menu"> Menu </Link>
+                <Link href="/Footer2"> Test </Link>
                 <Link href="" onClick={(e) => { e.preventDefault(); openPopup(); }}> Contattaci </Link>
             </div>
 
