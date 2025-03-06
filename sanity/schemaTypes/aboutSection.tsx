@@ -2,17 +2,17 @@ import { type SchemaTypeDefinition } from 'sanity';
 
 const aboutSection: SchemaTypeDefinition = {
     name: 'aboutSection',
-  title: 'About Section',
+  title: 'Sezione Chi Siamo',
   type: 'document',
   fields: [
     {
       name: 'title',
-      title: 'Title',
+      title: 'Titolo',
       type: 'string', // Per il titolo "Chi Siamo"
     },
     {
       name: 'description',
-      title: 'Description',
+      title: 'Descrizione',
       type: 'text', // Per il testo descrittivo
     },
   ],

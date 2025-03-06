@@ -2,26 +2,26 @@ import { type SchemaTypeDefinition } from 'sanity';
 
 const allergens: SchemaTypeDefinition = {
     name: 'allergen',
-    title: 'Allergen',
+    title: 'Allergeni',
     type: 'document',
     fields: [
       {
         name: 'name',
-        title: 'Name',
+        title: 'Nome',
         type: 'string',
-        description: 'Name of the allergen',
+        description: 'Nome dell\'allergene',
       },
       {
         name: 'symbol',
-        title: 'Symbol',
+        title: 'Simbolo',
         type: 'string',
-        description: 'Emoji or symbol representing the allergen',
+        description: 'Emoji o simbolo che rappresenta l\'allergene',
       },
       {
         name: 'description',
-        title: 'Description',
+        title: 'Descrizione',
         type: 'text',
-        description: 'A brief description of the allergen',
+        description: 'Una breve descrizione dell\'allergene',
       },
     ],
   };

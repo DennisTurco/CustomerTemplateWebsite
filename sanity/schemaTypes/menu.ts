@@ -2,36 +2,37 @@ import { type SchemaTypeDefinition } from 'sanity';
 
 const menu: SchemaTypeDefinition = {
   name: 'menuItem',
-  title: 'Menu Item',
+  title: 'Menu',
   type: 'document',
   fields: [
     {
-      name: 'imageURL',
-      title: 'Image URL',
-      type: 'url',
-      description: 'URL of the menu item image',
+      name: 'image',
+      title: 'Immagine',
+      type: 'image',
+      options: { hotspot: true },
+      description: 'Immagine del piatto',
     },
     {
       name: 'name',
-      title: 'Name',
+      title: 'Nome',
       type: 'string',
-      description: 'Name of the dish',
+      description: 'Nome del piatto',
     },
     {
       name: 'description',
-      title: 'Description',
+      title: 'Descrizione',
       type: 'text',
-      description: 'Description of the dish',
+      description: 'Descrizione del piatto',
     },
     {
       name: 'price',
-      title: 'Price',
+      title: 'Prezzo',
       type: 'string',
-      description: 'Price of the dish (e.g., €12.00)',
+      description: 'Prezzo del piatto (es., €12.00)',
     },
     {
       name: 'allergens',
-      title: 'Allergens',
+      title: 'Allergeni',
       type: 'array',
       of: [
         {
@@ -39,7 +40,7 @@ const menu: SchemaTypeDefinition = {
           to: [{ type: 'allergen' }], // Referenza ai documenti allergeni
         },
       ],
-      description: 'List of allergens for the dish',
+      description: 'Lista degli allergeni del piatto',
     },
   ],
 };

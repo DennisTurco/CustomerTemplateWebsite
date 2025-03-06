@@ -6,28 +6,29 @@ const projects: SchemaTypeDefinition = {
   type: 'document',
   fields: [
     {
-      name: 'imageURL',
-      title: 'Image URL',
-      type: 'url',
-      description: 'URL of the project image',
+      name: 'image',
+      title: 'Immagine',
+      type: 'image',
+      options: { hotspot: true },
+      description: 'Immagine del progetto',
     },
     {
       name: 'title',
-      title: 'Title',
+      title: 'Titolo',
       type: 'string',
-      description: 'Title of the project',
+      description: 'Titolo del progetto',
     },
     {
       name: 'description',
-      title: 'Description',
+      title: 'Descrizione',
       type: 'text',
-      description: 'Description of the project',
+      description: 'Descrizione del progetto',
     },
     {
       name: 'link',
       title: 'Link',
       type: 'url',
-      description: 'Link to the project website or page',
+      description: 'Link del progetto',
     },
   ],
 };
