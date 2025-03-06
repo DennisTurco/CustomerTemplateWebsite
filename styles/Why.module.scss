@@ -57,8 +57,28 @@
       height: 77%;
     }
   }
+
   @media (min-width: $media-tablet) {
     padding: 0 57px;
+  }
+}
+
+.why_text_content {
+  padding-top: 44px;
+  margin-bottom: 54px;
+  color: var(--dark-greyblue-900);
+  @include flex-column-center;
+  @media (min-width: $media-desktop) {
+    margin-bottom: 86px;
+  }
+}
+
+.why_card_container {
+  @media (min-width: $media-desktop) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px 30px;
+    margin-bottom: 24px;
   }
 }
 
@@ -83,20 +103,25 @@
 
 .image_box {
   margin-bottom: 56px;
+  display: flex;            // Aggiungi display flex per centrare l'immagine
+  justify-content: center;  // Centra orizzontalmente
+  align-items: center;      // Centra verticalmente
+  max-width: 500px;
   
   // Aumenta la larghezza per i dispositivi più grandi
   @media (min-width: $media-tablet) {
-    width: 200px; // Immagine più grande su tablet
+    width: 100%; // Immagine più grande su tablet, ma sempre al 100% del contenitore
     margin: 0 60px 0 20px;
   }
   
   @media (min-width: $media-desktop) {
-    width: 250px; // Ancora più grande su desktop
+    width: 100%; // Ancora più grande su desktop, ma sempre al 100% del contenitore
     margin: 0 0 56px;
   }
 
   .image {
-    width: 100%; // Imposta la larghezza dell'immagine al 100% del contenitore
+    width: 65%; // Imposta la larghezza dell'immagine al 65% del contenitore
     height: auto; // Mantiene l'aspect ratio dell'immagine
   }
 }
+

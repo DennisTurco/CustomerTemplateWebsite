@@ -8,15 +8,15 @@ const why: SchemaTypeDefinition = {
     {
       name: 'title',
       title: 'Titolo',
-      type: 'string', // Per il titolo "Chi Siamo"
+      type: 'string',
     },
     {
       name: 'description',
       title: 'Descrizione',
-      type: 'text', // Per il testo descrittivo
+      type: 'text',
     },
     {
-      name: 'data', // Cambiato nome del campo in 'data' per rappresentare correttamente l'array di oggetti
+      name: 'data', 
       title: 'Servizi (Max 3)',
       type: 'array',
       of: [
@@ -33,6 +33,7 @@ const why: SchemaTypeDefinition = {
               name: 'image',
               title: 'Immagine',
               type: 'image',
+              options: { hotspot: true },
               description: 'Immagine dell\'elemento',
             },
             {
@@ -50,25 +51,24 @@ const why: SchemaTypeDefinition = {
           ],
         },
       ],
+      
       // Limitiamo a 3 voci esatte
       validation: Rule => Rule.length(3).error('You must have exactly 3 items in this list.'),
+      
       // Pre-popolazione dei dati (pre-compilazione direttamente nel campo)
       initialValue: () => [
         {
           title: "Quality",
-          image:"/images/coffee-bean-bag.png",
           description: "We believe in quality over quantity",
           altText: "Quality",
         },
         {
           title: "Fast Delivery Service",
-          image:"/images/coffee-bean-bag.png",
           description: "We support fast delivery services",
           altText: "Fast Delivery Service",
         },
         {
           title: "Best in Business",
-          image:"/images/coffee-bean-bag.png",
           description: "We are best in business",
           altText: "Business",
         },

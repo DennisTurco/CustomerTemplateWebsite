@@ -77,25 +77,6 @@
   }
 }
 
-.why_text_content {
-  padding-top: 44px;
-  margin-bottom: 54px;
-  color: var(--dark-greyblue-900);
-  @include flex-column-center;
-  @media (min-width: $media-desktop) {
-    margin-bottom: 86px;
-  }
-}
-
-.why_card_container {
-  @media (min-width: $media-desktop) {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px 30px;
-    margin-bottom: 24px;
-  }
-}
-
 .how_container {
   @include flex-column-center;
   margin-bottom: 120px;
