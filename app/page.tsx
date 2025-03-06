@@ -4,9 +4,10 @@ import { motion } from "framer-motion";
 import { Navbar } from "../components/NavBar";
 import { Footer } from "../components/Footer2";
 import GattiSection from "../components/GattiSection";
-import Hero3 from "../components/Hero3";
-import Why from "../components/Why";
 import WhyData from "../data/why.js";
+import Hero from "../components/Hero";
+import Why from "../components/Why";
+import AboutSection from "../components/AboutSection";
 import styles from "../styles/Home.module.scss";
 import MapsPosition from "../components/MapsPosition";
 import sanityClient from "@sanity/client";
@@ -29,23 +30,22 @@ export default function HomePage() {
   return (
     <div className="bg-gray-100 text-gray-900">
       {/* Navbar */}
-      <motion.div initial="hidden" animate="visible" variants={fadeIn}>
+      <div>
         <Navbar />
-      </motion.div>
+      </div>
 
       {/* Hero Section */}
       <motion.section initial="hidden" whileInView="visible" variants={fadeIn} viewport={{ once: true }}>
-        <Hero3 />
+        <Hero />
       </motion.section>
 
       {/* About Section */}
-      <motion.section className="max-w-7xl mx-auto py-12 px-6 text-center" initial="hidden" whileInView="visible" variants={fadeIn} viewport={{ once: true }}>
-        <h2 className="text-4xl font-bold text-blue-600">{aboutData.title}</h2>
-        <p className="mt-4 text-xl max-w-2xl mx-auto text-gray-600">{aboutData.description}</p>
+      <motion.section initial="hidden" whileInView="visible" variants={fadeIn} viewport={{ once: true }}>
+        <AboutSection aboutData={aboutData} fadeIn={fadeIn} />
       </motion.section>
 
       <motion.div initial="hidden" whileInView="visible" variants={fadeIn} viewport={{ once: true }}>
-        <GattiSection />
+        <GattiSection client={client}/>
       </motion.div>
 
       {/* Why Section */}
@@ -67,9 +67,9 @@ export default function HomePage() {
       </motion.div>
 
       {/* Footer */}
-      <motion.div initial="hidden" whileInView="visible" variants={fadeIn} viewport={{ once: true }}>
+      <div>
         <Footer />
-      </motion.div>
+      </div>
     </div>
   );
 }

@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import styles from "/styles/Hero.module.scss";
-import { FaChevronDown } from "react-icons/fa";
 
 const Hero = () => {
     const [offsetX, setOffsetX] = useState(0);
@@ -42,10 +41,6 @@ const Hero = () => {
         >
             <div className={styles.overlay}></div>
             <div className={styles.content}></div>
-            <div className={styles.scrollDown}>
-                <FaChevronDown />
-            </div>
-
             <div className={styles.arrow} ><img src="/gifs/animation1.gif"></img></div>
         </section>
     );

@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import sanityClient from '@sanity/client'; // Import Sanity client
 import styles from '../styles/GattiSection.module.scss';
 
 // Definizione del tipo di dati
@@ -15,14 +14,7 @@ interface Gatto {
   descrizione: string;
 }
 
-// Configura il client Sanity
-const client = sanityClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
-  useCdn: true, // Usa CDN per migliorare le performance
-});
-
-export default function GattiSection() {
+export default function GattiSection({client}) {
   const [gatti, setGatti] = useState<Gatto[]>([]);
 
   useEffect(() => {

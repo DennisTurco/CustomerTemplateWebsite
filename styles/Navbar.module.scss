@@ -38,8 +38,9 @@
   @media (min-width: $media-tablet) {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 300px;
+    justify-content: flex-end; /* Allinea i link a destra */
+    width: 100%; /* Assicurati che i link occupino tutta la larghezza disponibile */
+    gap: 30px; /* Distanza maggiore tra i link */
   }
 }
 

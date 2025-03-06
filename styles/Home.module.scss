@@ -1,7 +1,6 @@
 @use "resolution" as *;
 
 .hero_container {
-  background-image: url(/assets/home/coffee-cup-home.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -9,12 +8,6 @@
   border-radius: 12px;
   margin-top: 90px;
   max-height: 600px;
-  @media (min-width: $media-tablet) {
-    background-image: url(/assets/home/coffee-cup-home.jpg);
-  }
-  @media (min-width: $media-desktop) {
-    background-image: url(/assets/home/coffee-cup-home.jpg);
-  }
 }
 
 .hero_content {
@@ -81,43 +74,6 @@
   @media (min-width: $media-desktop) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-.why_container {
-  position: relative;
-  color: var(--light-cream-100);
-  text-align: center;
-  padding: 0 44px;
-  h2 {
-    font-size: var(--md-header-fs);
-    margin-bottom: 24px;
-  }
-  p {
-    font-size: var(--md-body-fs);
-    max-width: 516px;
-  }
-
-  &::after {
-    content: "";
-    background-color: var(--dark-greyblue-900);
-    position: absolute;
-    height: 59%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    border-radius: 8px;
-    @media (min-width: $media-tablet) {
-      height: 65%;
-    }
-    @media (min-width: $media-desktop) {
-      height: 77%;
-    }
-  }
-  @media (min-width: $media-tablet) {
-    padding: 0 57px;
   }
 }
 

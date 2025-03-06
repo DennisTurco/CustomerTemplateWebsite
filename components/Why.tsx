@@ -6,7 +6,14 @@ const Why = ({ imageURL, title, description, altText }) => {
     <>
       <div className={styles.container}>
         <div className={styles.image_box}>
-          <Image src={imageURL} alt={altText} height="72" width="72" />
+          <Image
+            src={imageURL}
+            alt={altText}
+            layout="intrinsic" // Mantiene le proporzioni dell'immagine
+            width={300} // Puoi impostare un valore relativo alla larghezza
+            height={200} // Mantiene un rapporto con l'altezza
+            className={styles.image} // Aggiungi una classe personalizzata se necessario
+          />
         </div>
         <div className={styles.text_content}>
           <h3>{title}</h3>
@@ -15,13 +22,6 @@ const Why = ({ imageURL, title, description, altText }) => {
       </div>
     </>
   );
-};
-
-Why.defaultProps = {
-  imageURL: "/public/images/coffee-bean-bag.png",
-  title: "NextJS Coffee Shop",
-  description: "We are coming soon !",
-  altText: "Why choose us ?",
 };
 
 export default Why;

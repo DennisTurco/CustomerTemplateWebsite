@@ -8,7 +8,7 @@ export const Footer = () => {
       <div style={styles.container}>
         {/* Colonna 1: Logo, Descrizione e Social */}
         <div style={styles.column}>
-          <img src="/public/images/logo.png" alt="Logo" style={styles.logo} />
+          <img src="/images/logo.png" alt="Logo" style={styles.logo} />
           <p style={styles.description}>Descrizione della tua azienda o sito web.</p>
           <div style={styles.socialIcons}>
             <Link href="https://facebook.com" passHref>

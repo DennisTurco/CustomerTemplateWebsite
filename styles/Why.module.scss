@@ -16,11 +16,49 @@
     justify-content: space-evenly;
     padding: 0 40px;
   }
+
   @media (min-width: $media-desktop) {
     @include flex-column-center;
     text-align: center;
     max-height: 382px;
     margin: 0;
+  }
+}
+
+.why_container {
+  position: relative;
+  color: var(--light-cream-100);
+  text-align: center;
+  padding: 0 44px;
+  h2 {
+    font-size: var(--md-header-fs);
+    margin-bottom: 24px;
+  }
+  p {
+    font-size: var(--md-body-fs);
+    max-width: 516px;
+  }
+
+  &::after {
+    content: "";
+    background-color: var(--dark-greyblue-900);
+    position: absolute;
+    height: 59%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    border-radius: 8px;
+    @media (min-width: $media-tablet) {
+      height: 65%;
+    }
+    @media (min-width: $media-desktop) {
+      height: 77%;
+    }
+  }
+  @media (min-width: $media-tablet) {
+    padding: 0 57px;
   }
 }
 
@@ -34,6 +72,7 @@
   p {
     font-size: var(--lg-body-fs);
   }
+  
   @media (min-width: $media-tablet) {
     max-width: none;
     h3 {
@@ -44,13 +83,20 @@
 
 .image_box {
   margin-bottom: 56px;
-  flex-shrink: 1;
+  
+  // Aumenta la larghezza per i dispositivi più grandi
   @media (min-width: $media-tablet) {
-    width: 56px;
+    width: 200px; // Immagine più grande su tablet
     margin: 0 60px 0 20px;
   }
+  
   @media (min-width: $media-desktop) {
-    width: 72px;
+    width: 250px; // Ancora più grande su desktop
     margin: 0 0 56px;
+  }
+
+  .image {
+    width: 100%; // Imposta la larghezza dell'immagine al 100% del contenitore
+    height: auto; // Mantiene l'aspect ratio dell'immagine
   }
 }
