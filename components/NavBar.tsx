@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { GiCoffeePot, GiHamburgerMenu } from "react-icons/gi";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { GrFormClose } from "react-icons/gr";
 import styles from "../styles/NavBar.module.scss";
 import Contacts from "../components/Contact";
@@ -21,14 +21,13 @@ export const Navbar: React.FC = () => {
     return (
         <header className={styles.container}>
             <Link href="/">
-                <GiCoffeePot size={44} />
+                <img src="/images/logo.png" alt="logo" className="max-w-[50px]" />
             </Link>
 
             <div className={styles.link_container}>
                 <Link href="/"> Home </Link>
                 <Link href="/Projects"> Progetti </Link>
                 <Link href="/Menu"> Menu </Link>
-                <Link href="/AboutSection"> Test </Link>
                 <Link href="" onClick={(e) => { e.preventDefault(); openPopup(); }}> Contattaci </Link>
             </div>
 
@@ -50,7 +49,7 @@ export const Navbar: React.FC = () => {
             >
                 <div className={styles.menu_links_container}>
                     <Link href="/" onClick={() => setHamburgerClicked(false)}> Home </Link>
-                    <Link href="/about" onClick={() => setHamburgerClicked(false)}> About us </Link>
+                    <Link href="/about" onClick={() => setHamburgerClicked(false)}> Menu </Link>
                     <Link href="#" onClick={(e) => { e.preventDefault(); openPopup(); }}> Contattaci </Link>
                 </div>
             </div>

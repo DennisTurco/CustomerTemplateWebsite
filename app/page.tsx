@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Navbar } from "../components/NavBar";
-import { Footer } from "../components/Footer2";
+import Footer from "../components/Footer2";
 import GattiSection from "../components/GattiSection";
 import Hero from "../components/Hero";
 import WhySection from "../components/Why";
@@ -30,7 +30,8 @@ export default function HomePage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const about = await client.fetch(`*[_type == "aboutSection"][0]{ title, description }`);
+        const about = await client.fetch(`*[_type == "aboutSection"][0]{ title, description, data[] { title, description, image { asset -> { url } } } }`);
+        console.log(about);
         setAboutData(about);
 
         const why = await client.fetch(`*[_type == "whyData"][0]{ title, description, data }`);

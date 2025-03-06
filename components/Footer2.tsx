@@ -1,110 +1,94 @@
 import React from "react";
-import Link from "next/link";
-import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+import {
+    FaFacebook,
+    FaInstagram,
+    FaLinkedin,
+    FaLocationArrow,
+    FaMobileAlt,
+} from "react-icons/fa";
 
-export const Footer = () => {
-    return (
-    <footer style={styles.footer}>
-      <div style={styles.container}>
-        {/* Colonna 1: Logo, Descrizione e Social */}
-        <div style={styles.column}>
-          <img src="/images/logo.png" alt="Logo" style={styles.logo} />
-          <p style={styles.description}>Descrizione della tua azienda o sito web.</p>
-          <div style={styles.socialIcons}>
-            <Link href="https://facebook.com" passHref>
-              <FaFacebook size={24} style={styles.icon} />
-            </Link>
-            <Link href="https://twitter.com" passHref>
-              <FaTwitter size={24} style={styles.icon} />
-            </Link>
-            <Link href="https://instagram.com" passHref>
-              <FaInstagram size={24} style={styles.icon} />
-            </Link>
-          </div>
-        </div>
+const Footer = () => {
+  return (
+      <div> 
+          <section className="max-w-[1200px] mx-auto px-4">
+              <div className="flex flex-col md:grid md:grid-cols-3 py-5 gap-6">
+                  
+                  {/* Colonna 1 */}
+                  <div className="py-8 px-4 w-full">
+                      <h1 className="sm:text-3xl text-xl font-bold sm:text-left text-justify mb-3 flex items-center gap-3">
+                          <img src="/images/logo.png" alt="logo" className="max-w-[50px]" />
+                          Fusa & Caffè
+                      </h1>
+                      <p>
+                          adjdhasgjhd asgyjkdasjhdga agshdga aisdhjkas asjkdjkashdjk lasaskd asmndasnmd
+                          asdnasbdnbasvndb ajsm,dnasbndm jsdalsdkj al;sdasdipfqiew asdkfhassk. {" "}
+                      </p>
+                      <br/>
+                      <div className="flex items-center gap-3">
+                          <FaLocationArrow />
+                          <p> Parma </p>
+                      </div>
+                      <div className="flex items-center gap-3 mt-3">
+                          <FaMobileAlt />
+                          <p> +39 1234567890 </p>
+                      </div>
 
-        {/* Colonna 2: Link */}
-        <div style={styles.column}>
-          <h3 style={styles.title}>Link Utili</h3>
-          <ul style={styles.list}>
-            <li><Link href="/about" style={styles.link}>Chi siamo</Link></li>
-            <li><Link href="/services" style={styles.link}>Servizi</Link></li>
-            <li><Link href="/contact" style={styles.link}>Contatti</Link></li>
-          </ul>
-        </div>
+                      {/* Social Icons */}
+                      <div className="flex items-center gap-3 mt-6">
+                          <a href="#" className="text-3xl">
+                              <FaInstagram />
+                          </a>
+                          <a href="#" className="text-3xl">
+                              <FaFacebook />
+                          </a>
+                          <a href="#" className="text-3xl">
+                              <FaLinkedin />
+                          </a>
+                      </div>
+                  </div>
 
-        {/* Colonna 3: Link */}
-        <div style={styles.column}>
-          <h3 style={styles.title}>Supporto</h3>
-          <ul style={styles.list}>
-            <li><Link href="/faq" style={styles.link}>FAQ</Link></li>
-            <li><Link href="/terms" style={styles.link}>Termini e condizioni</Link></li>
-            <li><Link href="/privacy" style={styles.link}>Privacy Policy</Link></li>
-          </ul>
-        </div>
+                  {/* Colonne Link */}
+                  <div className="flex flex-col sm:flex-row md:col-span-2 gap-6">
+                      <div className="w-full sm:w-1/3 px-4">
+                          <h1 className="text-xl font-bold mb-3">Link Importanti</h1>
+                          <ul className="flex flex-col gap-3">
+                              <li className="cursor-pointer"> Home </li>
+                              <li className="cursor-pointer"> Progetti </li>
+                              <li className="cursor-pointer"> Menu </li>
+                              <li className="cursor-pointer"> Contattaci </li>
+                          </ul>
+                      </div>
 
-        {/* Colonna 4: Link */}
-        <div style={styles.column}>
-          <h3 style={styles.title}>Seguici</h3>
-          <ul style={styles.list}>
-            <li><Link href="/blog" style={styles.link}>Blog</Link></li>
-            <li><Link href="/careers" style={styles.link}>Carriere</Link></li>
-            <li><Link href="/partners" style={styles.link}>Partnership</Link></li>
-          </ul>
-        </div>
+                      <div className="w-full sm:w-1/3 px-4">
+                          <h1 className="text-xl font-bold mb-3">Links</h1>
+                          <ul className="flex flex-col gap-3">
+                              <li className="cursor-pointer"> Home </li>
+                              <li className="cursor-pointer"> Progetti </li>
+                              <li className="cursor-pointer"> Menu </li>
+                              <li className="cursor-pointer"> Contattaci </li>
+                          </ul>
+                      </div>
+
+                      <div className="w-full sm:w-1/3 px-4">
+                          <h1 className="text-xl font-bold mb-3">Links</h1>
+                          <ul className="flex flex-col gap-3">
+                              <li className="cursor-pointer"> Home </li>
+                              <li className="cursor-pointer"> Progetti </li>
+                              <li className="cursor-pointer"> Menu </li>
+                              <li className="cursor-pointer"> Contattaci </li>
+                          </ul>
+                      </div>
+                  </div>
+
+              </div>
+
+              <div className="text-center py-10 border-t-2 border-gray-300/50">
+                  copyright
+              </div>
+
+          </section>
       </div>
-    </footer>
   );
-};
+}
 
-const styles = {
-  footer: {
-    backgroundColor: '#333',
-    color: '#fff',
-    padding: '40px 0',
-  },
-  container: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    maxWidth: '1200px',
-    margin: '0 auto',
-    padding: '0 20px',
-  },
-  column: {
-    flex: 1,
-    padding: '0 20px',
-  },
-  logo: {
-    width: '150px',
-    marginBottom: '10px',
-  },
-  description: {
-    marginBottom: '20px',
-    fontSize: '14px',
-    color: '#bbb',
-  },
-  socialIcons: {
-    display: 'flex',
-    gap: '10px',
-  },
-  icon: {
-    color: '#fff',
-    transition: 'color 0.3s ease',
-  },
-  title: {
-    fontSize: '18px',
-    marginBottom: '10px',
-    color: '#fff',
-  },
-  list: {
-    listStyle: 'none',
-    padding: '0',
-  },
-  link: {
-    color: '#bbb',
-    textDecoration: 'none',
-    display: 'block',
-    marginBottom: '8px',
-    transition: 'color 0.3s ease',
-  },
-};
+export default Footer;
