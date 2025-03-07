@@ -25,11 +25,11 @@
 }
 
 .logo {
-  max-width: 33px;
-  max-height: 218px;
+  max-width: 50px;
+  max-height: auto;
   @media (min-width: $media-tablet) {
-    max-width: 26px;
-    max-height: 236px;
+    max-width: 50px;
+    max-height: auto;
   }
 }
 
@@ -83,4 +83,17 @@
     color: var(--dark-greyblue-900);
     margin-bottom: 32px;
   }
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px; // Distanza tra logo e testo
+  text-decoration: none; // Rimuove eventuali sottolineature del link
+}
+
+.logoText {
+  font-size: 1.2rem; // Dimensione del testo
+  font-weight: bold;
+  color: var(--dark-greyblue-900); // Adatta il colore in base al tema
 }

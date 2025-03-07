@@ -20,15 +20,17 @@ export const Navbar: React.FC = () => {
 
     return (
         <header className={styles.container}>
-            <Link href="/">
-                <img src="/images/logo.png" alt="logo" className="max-w-[50px]" />
+            <Link href="/" className={styles.logoContainer}>
+                <img src="/images/logo.png" alt="logo" className={styles.logo}/>
+                <span className={styles.logoText}>Fusa & Caffè</span>
             </Link>
 
             <div className={styles.link_container}>
                 <Link href="/"> Home </Link>
-                <Link href="/Projects"> Progetti </Link>
                 <Link href="/Menu"> Menu </Link>
-                <Link href="" onClick={(e) => { e.preventDefault(); openPopup(); }}> Contattaci </Link>
+                <Link href="/Cats"> Gatti </Link>
+                {/* <Link href="/Projects"> Progetti </Link> */}
+                {/* <Link href="" onClick={(e) => { e.preventDefault(); openPopup(); }}> Contattaci </Link> */}
             </div>
 
             {hamburgerClicked ? (
@@ -49,8 +51,9 @@ export const Navbar: React.FC = () => {
             >
                 <div className={styles.menu_links_container}>
                     <Link href="/" onClick={() => setHamburgerClicked(false)}> Home </Link>
-                    <Link href="/about" onClick={() => setHamburgerClicked(false)}> Menu </Link>
-                    <Link href="#" onClick={(e) => { e.preventDefault(); openPopup(); }}> Contattaci </Link>
+                    <Link href="/Menu" onClick={() => setHamburgerClicked(false)}> Menu </Link>
+                    <Link href="/Cats" onClick={() => setHamburgerClicked(false)}> Gatti </Link>
+                    {/* <Link href="#" onClick={(e) => { e.preventDefault(); openPopup(); }}> Contattaci </Link> */}
                 </div>
             </div>
 

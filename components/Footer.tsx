@@ -1,21 +1,21 @@
 import React from "react";
 import Link from "next/link";
 import Copyright from "./Copyright";
-import { GiCoffeePot } from "react-icons/gi";
 import { RiFacebookCircleLine, RiInstagramLine, RiTwitterLine } from "react-icons/ri";
 import styles from "../styles/Footer.module.scss";
 
 export const Footer = () => {
     return (
         <footer className={styles.footer}>
-            <Link href="/">
-                <GiCoffeePot className={styles.logo} size={32} />
+            <Link href="/" className="flex flex-col items-center"> 
+                Fusa & Caffè
+                <img src="/images/logo.png" alt="logo" className="max-w-[80px] mb-4" />  
             </Link>
 
             <div className={styles.links_container}>
                 <Link href="/">HOME</Link>
-                <Link href="/about">ABOUT US</Link>
-                <Link href="/contact">CONTATTI</Link>
+                <Link href="/Menu">MENU</Link>
+                <Link href="/Cats">GATTI</Link>
             </div>
 
             <div className={styles.social_container}>
@@ -24,9 +24,10 @@ export const Footer = () => {
                 <Link href="/"><RiTwitterLine size={32} className={styles.social_link} /></Link>
             </div>
 
-           <div className={styles.copyright_wrapper}>
+            <div className={styles.copyright_wrapper}>
                 <Copyright />
             </div>
         </footer>
+
     );
 };

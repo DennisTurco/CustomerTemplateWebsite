@@ -5,7 +5,7 @@ const Copyright = () => {
   return (
     <div className={styles.copyright}>
       &copy; {new Date().getFullYear()} Tutti i diritti riservati |  
-      <a href="/" className={styles.copyrightLink}> Shard </a>
+      <a href="https://www.shardpc.it/" target="blank" className={styles.copyrightLink}> Shard </a>
     </div>
   );
 };

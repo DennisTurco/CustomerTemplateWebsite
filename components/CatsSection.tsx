@@ -1,8 +1,7 @@
-'use client';
-
+"use client";
+import styles from '../styles/Cats.module.scss';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import styles from '../styles/GattiSection.module.scss';
 
 // Definizione del tipo di dati
 interface Gatto {
@@ -14,7 +13,7 @@ interface Gatto {
   descrizione: string;
 }
 
-export default function GattiSection({client}) {
+export default function CatsSection({client}) {
   const [gatti, setGatti] = useState<Gatto[]>([]);
 
   useEffect(() => {

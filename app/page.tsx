@@ -1,10 +1,8 @@
 "use client";
-
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Navbar } from "../components/NavBar";
-import Footer from "../components/Footer2";
-import GattiSection from "../components/GattiSection";
+import { Footer } from "../components/Footer";
 import Hero from "../components/Hero";
 import WhySection from "../components/Why";
 import AboutSection from "../components/AboutSection";
@@ -57,10 +55,6 @@ export default function HomePage() {
           <AboutSection aboutData={aboutData} fadeIn={fadeIn} />
         </motion.section>
       )}
-
-      <motion.div initial="hidden" whileInView="visible" variants={fadeIn} viewport={{ once: true }}>
-        <GattiSection client={client} />
-      </motion.div>
 
       {whyData && (
         <motion.section className={styles.why_container} initial="hidden" whileInView="visible" variants={fadeIn} viewport={{ once: true }}>
