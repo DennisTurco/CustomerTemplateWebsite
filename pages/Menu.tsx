@@ -31,9 +31,6 @@ export default function HomePage() {
             {/* Menu list */}
             <div><Menu client={client}/></div>
 
-            {/* Google Maps */}
-            <div> <MapsPosition /> </div>
-
             {/* Footer */}
             <div> <Footer /> </div>
         </div>

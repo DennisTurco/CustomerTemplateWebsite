@@ -18,9 +18,6 @@ export default function HomePage() {
             {/* Projects list */}
             <div><Projects /></div>
 
-            {/* Google Maps */}
-            <div> <MapsPosition /> </div>
-
             {/* Footer */}
             <div> <Footer /> </div>
         </div>

@@ -33,9 +33,6 @@ export default function Cats() {
                 <CatsSection client={client} />
             </motion.div>
 
-            {/* Google Maps */}
-            <div> <MapsPosition /> </div>
-
             {/* Footer */}
             <div> <Footer /> </div>
         </div>

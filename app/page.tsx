@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Navbar } from "../components/NavBar";
 import { Footer } from "../components/Footer";
-import Hero from "../components/Hero";
+import Hero from "../components/Hero4";
 import WhySection from "../components/Why";
 import AboutSection from "../components/AboutSection";
 import styles from "../styles/Home.module.scss";

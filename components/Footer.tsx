@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Copyright from "./Copyright";
 import { RiFacebookCircleLine, RiInstagramLine, RiTwitterLine } from "react-icons/ri";
+import { FaMobileAlt, FaLocationArrow } from "react-icons/fa";  // Aggiungiamo l'icona della posizione
 import styles from "../styles/Footer.module.scss";
 
 export const Footer = () => {
@@ -24,10 +25,21 @@ export const Footer = () => {
                 <Link href="/"><RiTwitterLine size={32} className={styles.social_link} /></Link>
             </div>
 
+            {/* Aggiunta del numero di telefono */}
+            <div className="flex items-center gap-3 mt-3">
+                <FaMobileAlt size={20} />
+                <p className="text-lg">+39 1234567890</p>  {/* Modifica il numero con quello reale */}
+            </div>
+
+            {/* Aggiunta dell'indirizzo */}
+            <div className="flex items-center gap-3 mt-3">
+                <FaLocationArrow size={20} />
+                <p className="text-lg">Parma</p>  {/* Modifica con l'indirizzo effettivo */}
+            </div>
+
             <div className={styles.copyright_wrapper}>
                 <Copyright />
             </div>
         </footer>
-
     );
 };

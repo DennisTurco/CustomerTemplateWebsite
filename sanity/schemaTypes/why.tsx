@@ -16,7 +16,7 @@ const why: SchemaTypeDefinition = {
       type: 'text',
     },
     {
-      name: 'data', 
+      name: 'data',
       title: 'Servizi (Max 3)',
       type: 'array',
       of: [
@@ -51,26 +51,29 @@ const why: SchemaTypeDefinition = {
           ],
         },
       ],
-      
+
       // Limitiamo a 3 voci esatte
       validation: Rule => Rule.length(3).error('You must have exactly 3 items in this list.'),
-      
+
+      // default description
+      //Oltre alla nostra selezione di bevande e piatti di caffetteria, siamo felici di offrire ai nostri ospiti una gamma di servizi extra pensati per arricchire la loro esperienza. Tra questi, potrete trovare:
+
       // Pre-popolazione dei dati (pre-compilazione direttamente nel campo)
       initialValue: () => [
         {
-          title: "Quality",
-          description: "We believe in quality over quantity",
-          altText: "Quality",
+          title: "Corsi di Yoga",
+          description: "Corsi di yoga nella stanza dei mici",
+          altText: "Yoga",
         },
         {
-          title: "Fast Delivery Service",
-          description: "We support fast delivery services",
-          altText: "Fast Delivery Service",
+          title: "Incontri Educativi",
+          description: "Incontri educativi",
+          altText: "Incontri",
         },
         {
-          title: "Best in Business",
-          description: "We are best in business",
-          altText: "Business",
+          title: "Aperitivi",
+          description: "Aperitivi per aiutare privati ed associazioni nelle spese",
+          altText: "Aperitivi",
         },
       ],
     },
