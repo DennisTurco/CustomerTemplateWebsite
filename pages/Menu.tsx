@@ -2,9 +2,7 @@ import "/styles/global.scss"
 import { Navbar } from "../components/NavBar";
 import { Footer } from "../components/Footer";
 import Hero from "../components/Hero2";
-import MapsPosition from "../components/MapsPosition";
 import Menu from "../components/Menu";
-import { motion } from "framer-motion";
 import sanityClient from "@sanity/client";
 
 const fadeIn = {
@@ -26,7 +24,7 @@ export default function HomePage() {
             <div><Navbar /></div>
 
             {/* Hero Section */}
-            <section><Hero imagePath={'/images/menuBanner.jpg'} /></section>
+            <section><Hero imagePath={'/images/menuBanner.jpg'} title={"Il Mostro Menù"} /></section>
 
             {/* Menu list */}
             <div><Menu client={client}/></div>

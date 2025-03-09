@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import sanityClient from '@sanity/client';
 import styles from '../styles/Menu.module.scss';
 import Image from 'next/image';
 

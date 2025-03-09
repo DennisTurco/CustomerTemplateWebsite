@@ -6,36 +6,60 @@ const cats: SchemaTypeDefinition = {
   type: 'document',
   fields: [
     {
-      name: 'nome',
+      name: 'name',
       title: 'Nome',
       type: 'string',
+      description: 'Titolo della sezione',
     },
     {
-      name: 'sesso',
-      title: 'Sesso',
-      type: 'string',
-      options: {
-        list: [
-          { title: 'Maschio', value: 'Maschio' },
-          { title: 'Femmina', value: 'Femmina' },
-        ],
-      },
-    },
-    {
-      name: 'eta',
-      title: 'Età',
-      type: 'string',
-    },
-    {
-      name: 'foto',
-      title: 'Foto',
-      type: 'image',
-      options: { hotspot: true },
-    },
-    {
-      name: 'descrizione',
+      name: 'description',
       title: 'Descrizione',
       type: 'text',
+      description: 'Descrizione della sezione',
+    },
+    {
+      name: 'data',
+      title: 'Menu',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              name: 'nome',
+              title: 'Nome',
+              type: 'string',
+            },
+            {
+              name: 'sesso',
+              title: 'Sesso',
+              type: 'string',
+              options: {
+                list: [
+                  { title: 'Maschio', value: 'Maschio' },
+                  { title: 'Femmina', value: 'Femmina' },
+                ],
+              },
+            },
+            {
+              name: 'eta',
+              title: 'Età',
+              type: 'string',
+            },
+            {
+              name: 'foto',
+              title: 'Foto',
+              type: 'image',
+              options: { hotspot: true },
+            },
+            {
+              name: 'descrizione',
+              title: 'Descrizione',
+              type: 'text',
+            },
+          ],
+        },
+      ],
     },
   ],
 };
