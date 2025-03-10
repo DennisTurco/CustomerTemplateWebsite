@@ -7,78 +7,91 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Fraunces:wght@900&display=swap");
 
+
+
 :root {
   // Definizione delle variabili PRIMA degli annidamenti
 
   --background: #f1f1f1;
   --foreground: #000000;
 
-  /* === Palette Generale === */
-  --background: #f1f1f1;
-  --foreground: #000000;
-  --dark-greyblue: #333d4b;
-  --dark-cyan: #0e8784;
-  --light-cyan: #00b8b8;
-  --medium-grey: #83888f;
-  --light-orange: #fdd6ba;
-  --light-cream: #fefcf7;
-  --yellow-thunder: #f9d851;
+  /* === Palette Principale (Colori Base) === */
+  --primary: #0e8784;         /* Verde acqua scuro */
+  --secondary: #16a34a;       /* Verde acceso */
+  --accent: #f4a261;          /* Arancione */
+  --background: #fefcf7;      /* Crema */
+  --foreground: #333d4b;      /* Grigio-blu scuro */
+  --muted: #6b7280;           /* Grigio medio */
+  --light: #ffffff;           /* Bianco puro */
+  --dark: #222222;            /* Nero leggero */
+  --shadow: rgba(0, 0, 0, 0.2)  /* Shadow */
 
   /* === Navbar === */
-  --navbar-background: var(--light-cream);
-  --navbar-shadow: rgba(0, 0, 0, 0.8);
-  --navbar-text: var(--dark-greyblue);
-  --navbar-link: var(--dark-greyblue);
+  --navbar-bg: var(--background);
+  --navbar-shadow: var(--shadow);
+  --navbar-text: var(--foreground);
+  --navbar-link: var(--foreground);
 
   /* === Hero Section === */
-  --hero-bg-gradient-1: #f7c6c3;
+  --hero-bg-gradient-1: #f7c6c3; 
   --hero-bg-gradient-2: #e5b0a7;
-  --hero-text: #333;
-  --hero-button-bg: #ff8a00;
+  --hero-text: var(--foreground);
+  --hero-button-bg: var(--accent);
   --hero-button-hover: #e67e00;
-  --hero-button-text: white;
-  --hero-button-shadow: rgba(0, 0, 0, 0.2);
-  --hero-scroll-arrow: #222;
+  --hero-button-text: var(--light);
+  --hero-button-shadow: var(--shadow);
+  --hero-scroll-arrow: var(--dark);
+
+  /* === About Us === */
+  --about-title: #1e3a8a;
+  --about-text: #4b5563;
+  --about-bg: #d1d5db;
 
   /* === Menu === */
-  --menu-title: #16a34a;
-  --menu-card-bg: var(--light-cream);
-  --menu-card-shadow: rgba(0, 0, 0, 0.1);
-  --menu-description: var(--medium-grey);
-  --menu-price: var(--light-cyan);
-  --menu-allergen-bg: var(--light-cream);
-  --menu-allergen-shadow: rgba(0, 0, 0, 0.1);
+  --menu-title: var(--secondary);
+  --menu-card-bg: var(--background);
+  --menu-card-shadow: var(--shadow);
+  --menu-description: var(--muted);
+  --menu-price: var(--primary);
+  --menu-allergen-bg: var(--background);
+  --menu-allergen-shadow: var(--shadow);
 
   /* === Categoria Lista === */
-  --cats-title: #16a34a;
-  --cats-subtitle: #6b7280;
-  --cats-card-desc: #6b7280;
-  --cats-card-bg: #ffffff;
-  --cats-card-shadow: rgba(0, 0, 0, 0.1);
+  --cats-title: var(--secondary);
+  --cats-subtitle: var(--muted);
+  --cats-card-desc: var(--muted);
+  --cats-card-bg: var(--light);
+  --cats-card-shadow: var(--shadow);
 
   /* === Servizi === */
-  --services-card-bg: var(--dark-cyan);
-  --services-card-text: var(--light-cream);
-  --services-title: var(--medium-grey);
-  --services-description: var(--medium-grey);
+  --services-card-bg: var(--primary);
+  --services-card-text: var(--light);
+  --services-title: var(--muted);
+  --services-description: var(--muted);
+
+  /* === Find Us === */
+  --where-bg-gradient-1: #3b4a60;
+  --where-bg-gradient-2: #1f2937;
+  --where-shadow: var(--shadow);
+  --where-text: var(--light);
 
   /* === Footer === */
-  --footer-bg: #222;
-  --footer-text: #ffffff;
-  --footer-links: #ffffff;
-  --footer-links-hover: #f4a261;
-  --footer-social: #ffffff;
+  --footer-bg: var(--dark);
+  --footer-text: var(--light);
+  --footer-links: var(--light);
+  --footer-links-hover: var(--accent);
+  --footer-social: var(--light);
 
   /* === Copyright === */
   --copyright-bg: rgba(255, 255, 255, 0.1);
-  --copyright-link: #f4a261;
+  --copyright-link: var(--accent);
 
 
-  --grey-muted: #999691;  /* A muted grey */
-  --light-grey-beige: #e5e7dc;  /* Light grey with a beige tint */
-  --dark-charcoal: #11111b;  /* A very dark grey, almost black */
-  --teal-green: #24958f;  /* A teal-like green */
-  --mint-teal: #3fbbaf;  /* A minty teal */
+  // --grey-muted: #999691;  /* A muted grey */
+  // --light-grey-beige: #e5e7dc;  /* Light grey with a beige tint */
+  // --dark-charcoal: #11111b;  /* A very dark grey, almost black */
+  // --teal-green: #24958f;  /* A teal-like green */
+  // --mint-teal: #3fbbaf;  /* A minty teal */
 
   --xl-header-fs: 40px;
   --md-header-fs: 28px;
