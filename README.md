@@ -49,6 +49,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 * `npm install sass`
 * `npm install -g @sanity/client`
 * `npm install framer-motion`
+* `npm i geist`
 
 ## Sanity Configuration
 * Check if sanity is installed: `sanity --version` or `npx sanity --version`
