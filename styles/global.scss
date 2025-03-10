@@ -7,85 +7,75 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Fraunces:wght@900&display=swap");
 
-
-
 :root {
   // Definizione delle variabili PRIMA degli annidamenti
 
   --background: #f1f1f1;
   --foreground: #000000;
 
-  /* === Palette Principale (Colori Base) === */
+  /* === Palette Base === */
   --primary: #0e8784;         /* Verde acqua scuro */
-  --secondary: #16a34a;       /* Verde acceso */
   --accent: #f4a261;          /* Arancione */
   --background: #fefcf7;      /* Crema */
-  --foreground: #333d4b;      /* Grigio-blu scuro */
-  --muted: #6b7280;           /* Grigio medio */
+  --foreground: #333d4b;      /* Testo principale (grigio-blu scuro) */
   --light: #ffffff;           /* Bianco puro */
-  --dark: #222222;            /* Nero leggero */
-  --shadow: rgba(0, 0, 0, 0.2)  /* Shadow */
+  --dark: #222222;            /* Quasi nero */
+  --shadow: rgba(0, 0, 0, 0.2); /* Ombra generica */
 
   /* === Navbar === */
   --navbar-bg: var(--background);
-  --navbar-shadow: var(--shadow);
   --navbar-text: var(--foreground);
-  --navbar-link: var(--foreground);
+  --navbar-shadow: var(--shadow);
 
   /* === Hero Section === */
-  --hero-bg-gradient-1: #f7c6c3; 
-  --hero-bg-gradient-2: #e5b0a7;
+  --hero-bg: var(--primary); /* Usa solo il colore primario per l'hero */
   --hero-text: var(--foreground);
   --hero-button-bg: var(--accent);
-  --hero-button-hover: #e67e00;
+  --hero-button-hover: var(--primary);
   --hero-button-text: var(--light);
   --hero-button-shadow: var(--shadow);
   --hero-scroll-arrow: var(--dark);
 
   /* === About Us === */
-  --about-title: #1e3a8a;
-  --about-text: #4b5563;
-  --about-bg: #d1d5db;
+  --about-bg: var(--background);
+  --about-title: var(--foreground);
+  --about-text: var(--foreground); /* Coerenza con il testo principale */
 
   /* === Menu === */
-  --menu-title: var(--secondary);
+  --menu-title: var(--foreground);
   --menu-card-bg: var(--background);
   --menu-card-shadow: var(--shadow);
-  --menu-description: var(--muted);
+  --menu-description: var(--foreground); /* Rimosso colore secondario per i descrittivi */
   --menu-price: var(--primary);
   --menu-allergen-bg: var(--background);
-  --menu-allergen-shadow: var(--shadow);
 
   /* === Categoria Lista === */
-  --cats-title: var(--secondary);
-  --cats-subtitle: var(--muted);
-  --cats-card-desc: var(--muted);
+  --cats-title: var(--foreground);
   --cats-card-bg: var(--light);
   --cats-card-shadow: var(--shadow);
 
   /* === Servizi === */
   --services-card-bg: var(--primary);
   --services-card-text: var(--light);
-  --services-title: var(--muted);
-  --services-description: var(--muted);
+  --services-title: var(--foreground);
+  --services-description: var(--foreground);
 
   /* === Find Us === */
-  --where-bg-gradient-1: #3b4a60;
-  --where-bg-gradient-2: #1f2937;
-  --where-shadow: var(--shadow);
-  --where-text: var(--light);
+  --findus-bg-gradient-1: var(--dark); 
+  --findus-bg-gradient-2: var(--primary);
+  --findus-text: var(--light);
 
   /* === Footer === */
   --footer-bg: var(--dark);
   --footer-text: var(--light);
   --footer-links: var(--light);
   --footer-links-hover: var(--accent);
-  --footer-social: var(--light);
 
   /* === Copyright === */
   --copyright-bg: rgba(255, 255, 255, 0.1);
   --copyright-link: var(--accent);
 
+  
 
   // --grey-muted: #999691;  /* A muted grey */
   // --light-grey-beige: #e5e7dc;  /* Light grey with a beige tint */
