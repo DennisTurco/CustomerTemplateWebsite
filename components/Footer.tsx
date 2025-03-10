@@ -34,7 +34,7 @@ export const Footer = () => {
             {/* Aggiunta dell'indirizzo */}
             <div className="flex items-center gap-3 mt-3">
                 <FaLocationArrow size={20} />
-                <p className="text-lg">Parma</p>  {/* Modifica con l'indirizzo effettivo */}
+                <p className="text-lg">Massimo D'Azeglio 72/e Parma cap 43125</p>
             </div>
 
             <div className={styles.copyright_wrapper}>
