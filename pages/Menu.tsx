@@ -24,7 +24,7 @@ export default function HomePage() {
             <div><Navbar /></div>
 
             {/* Hero Section */}
-            <section><Hero imagePath={'/images/menuBanner.jpg'} title={"Il Mostro Menù"} /></section>
+            <section><Hero imagePath={'/images/menuBanner.jpg'} title={""} /></section>
 
             {/* Menu list */}
             <div><Menu client={client}/></div>
