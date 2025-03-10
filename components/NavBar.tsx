@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { GrFormClose } from "react-icons/gr";
-import styles from "../styles/NavBar.module.scss";
+import styles from "../styles/Navbar.module.scss";
 import Contacts from "../components/Contact";
 
 export const Navbar: React.FC = () => {
