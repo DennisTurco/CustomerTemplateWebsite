@@ -9,21 +9,20 @@
 
 :root {
   // Definizione delle variabili PRIMA degli annidamenti
-
   --background: #f1f1f1;
   --foreground: #000000;
 
   /* === Palette Base === */
-  --primary: #0e8784;         /* Verde acqua scuro */
-  --accent: #f4a261;          /* Arancione */
-  --background: #fefcf7;      /* Crema */
-  --foreground: #333d4b;      /* Testo principale (grigio-blu scuro) */
+  --primary: #24958f;         /* Teal-like green */
+  --accent: #3fbbaf;          /* Minty teal */
+  --background: #e5e7dc;      /* Light grey with a beige tint */
+  --foreground: #11111b;      /* Very dark grey, almost black */
   --light: #ffffff;           /* Bianco puro */
-  --dark: #222222;            /* Quasi nero */
-  --shadow: rgba(0, 0, 0, 0.2); /* Ombra generica */
+  --dark: #11111b;            /* Very dark grey, almost black */
+  --shadow: rgba(0, 0, 0, 0.1); /* Ombra leggera */
 
   /* === Navbar === */
-  --navbar-bg: var(--background);
+  --navbar-bg: var(--accent);
   --navbar-text: var(--foreground);
   --navbar-shadow: var(--shadow);
 
@@ -43,11 +42,11 @@
 
   /* === Menu === */
   --menu-title: var(--foreground);
-  --menu-card-bg: var(--background);
+  --menu-card-bg: var(--light);
   --menu-card-shadow: var(--shadow);
   --menu-description: var(--foreground); /* Rimosso colore secondario per i descrittivi */
   --menu-price: var(--primary);
-  --menu-allergen-bg: var(--background);
+  --menu-allergen-bg: var(--light);
 
   /* === Categoria Lista === */
   --cats-title: var(--foreground);

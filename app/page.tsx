@@ -44,7 +44,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="bg-gray-100 text-gray-900">
+    <div>
       <Navbar />
       
       <motion.section initial="hidden" whileInView="visible" variants={fadeIn} viewport={{ once: true }}>
