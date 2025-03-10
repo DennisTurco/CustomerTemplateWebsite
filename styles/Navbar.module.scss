@@ -11,16 +11,12 @@
   right: 0;
   background-color: var(--light-cream-100);
   z-index: 3;
-  opacity: 1; /* Opacità base */
-  // transition: opacity 0.3s ease; /* Aggiungi una transizione per un effetto più fluido */
-  
-  @media (min-width: 1440px) {
-    margin: 0 auto;
-    padding: 17px 40px; /* Aggiunta una maggiore larghezza nei dispositivi più larghi */
-  }
+  opacity: 1;
+  transition: opacity 0.3s ease;
 
-  &:hover {
-    opacity: 1; /* Opacità su hover */
+  @media (min-width: 768px) { /* Tablet and larger */
+    margin: 0 auto;
+    padding: 17px 40px;
   }
 }
 
@@ -38,14 +34,15 @@
   @media (min-width: $media-tablet) {
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Allinea i link a destra */
-    width: 100%; /* Assicurati che i link occupino tutta la larghezza disponibile */
-    gap: 30px; /* Distanza maggiore tra i link */
+    justify-content: flex-end;
+    width: 100%;
+    gap: 30px;
   }
 }
 
 .hamburger {
   display: block;
+  font-size: 30px;
   @media (min-width: $media-tablet) {
     display: none;
   }
@@ -59,6 +56,12 @@
   bottom: 0;
   width: 100vw;
   height: 92vh;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark background for menu */
+  display: none; /* Initially hidden */
+
+  &.showMenu {
+    display: block; /* Show when hamburger is clicked */
+  }
 }
 
 .menu_links_container {
@@ -69,31 +72,36 @@
   height: 100%;
   width: 100%;
   padding-top: 10vh;
-  background: linear-gradient(
-    0deg,
-    rgba(254, 252, 247, 0) 0%,
-    rgba(254, 252, 247, 1) 50%,
-    rgba(254, 252, 247, 1) 100%
-  );
-
+  background: linear-gradient(0deg, rgba(254, 252, 247, 0) 0%, rgba(254, 252, 247, 1) 100%);
+  
   a {
     font-size: 24px;
     font-family: "Fraunces", serif;
     font-weight: 900;
     color: var(--dark-greyblue-900);
     margin-bottom: 32px;
+    transition: color 0.3s ease;
+    &:hover {
+      color: var(--primary-color); /* Add hover effect */
+    }
   }
 }
 
 .logoContainer {
   display: flex;
   align-items: center;
-  gap: 10px; // Distanza tra logo e testo
-  text-decoration: none; // Rimuove eventuali sottolineature del link
+  gap: 10px;
+  text-decoration: none;
 }
 
 .logoText {
-  font-size: 1.2rem; // Dimensione del testo
+  font-size: 1.2rem;
   font-weight: bold;
-  color: var(--dark-greyblue-900); // Adatta il colore in base al tema
+  color: var(--dark-greyblue-900);
+}
+
+@media (min-width: 768px) { /* Adjust for larger screens */
+  .menu_container {
+    display: none; /* Don't show the menu on large screens */
+  }
 }

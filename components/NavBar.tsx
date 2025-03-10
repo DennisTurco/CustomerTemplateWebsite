@@ -21,7 +21,7 @@ export const Navbar: React.FC = () => {
     return (
         <header className={styles.container}>
             <Link href="/" className={styles.logoContainer}>
-                <img src="/images/logo.png" alt="logo" className={styles.logo}/>
+                <img src="/images/logo.png" alt="logo" className={styles.logo} />
                 <span className={styles.logoText}>Fusa & Caffè</span>
             </Link>
 
@@ -30,7 +30,6 @@ export const Navbar: React.FC = () => {
                 <Link href="/Menu"> Menu </Link>
                 <Link href="/Cats"> Gatti </Link>
                 {/* <Link href="/Projects"> Progetti </Link> */}
-                {/* <Link href="" onClick={(e) => { e.preventDefault(); openPopup(); }}> Contattaci </Link> */}
             </div>
 
             {hamburgerClicked ? (
@@ -46,8 +45,7 @@ export const Navbar: React.FC = () => {
             )}
 
             <div
-                className={styles.menu_container}
-                style={hamburgerClicked ? { display: "block" } : { display: "none" }}
+                className={`${styles.menu_container} ${hamburgerClicked ? styles.showMenu : ''}`}
             >
                 <div className={styles.menu_links_container}>
                     <Link href="/" onClick={() => setHamburgerClicked(false)}> Home </Link>
