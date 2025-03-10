@@ -7,7 +7,7 @@
 .sectionTitle {
   font-size: var(--xl-header-fs);
   font-weight: 700;
-  color: var(--dark-greyblue-900);
+  color: var(--menu-title-color);
   margin-bottom: 30px;
   text-align: left;
 }
@@ -22,10 +22,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: var(--light-cream-100);
+  background: var(--menu-card-background);
   padding: 15px;
   border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 6px var(--menu-card-boxshadow);
   position: relative;
 }
 
@@ -49,14 +49,14 @@
 
 .description {
   font-size: var(--md-body-fs);
-  color: var(--medium-grey-400);
+  color: var(--menu-description);
   margin: 5px 0px;
 }
 
 .price {
   font-size: 14px; // Prezzo più piccolo
   font-weight: bold;
-  color: var(--dark-cyan-600);
+  color: var(--menu-price);
 }
 
 .allergens {
@@ -69,10 +69,10 @@
 
 .allergenLegend {
   margin-top: 40px;
-  background: var(--light-cream-100);
+  background: var(--menu-allergen-card-background);
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 6px var(--menu-allergen-card-boxshadow);
 }
 
 .legendTitle {

@@ -53,7 +53,7 @@
   border-radius: 8px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: $media-tablet) {
   .title {
     font-size: 1.5rem;
   }

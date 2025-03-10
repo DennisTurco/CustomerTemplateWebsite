@@ -1,5 +1,6 @@
+@use "resolution" as *;
+
 .gattiSection {
-    background-color: #fff;
     padding: 3rem 0;
 }
 
@@ -10,15 +11,15 @@
 }
 
 .title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #16a34a;
+    font-size: var(--xl-header-fs);
+    font-weight: 700;
+    color: var(--catslist-title-color);
 }
 
 .subtitle {
     margin-top: 1rem;
     font-size: 1.2rem;
-    color: #6b7280;
+    color: var(--catslist-subtitle-color);
 }
 
 .grid {
@@ -28,14 +29,14 @@
     margin-top: 2rem;
 }
 
-@media (max-width: 900px) {
+@media (max-width: $media-tablet) {
     .grid {
         grid-template-columns: repeat(2, 1fr); /* 2 colonne per schermi più piccoli */
         gap: 0.5rem; /* Mantieni uno spazio ravvicinato anche sui dispositivi più piccoli */
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: $media-mobile) {
     .grid {
         grid-template-columns: 1fr; /* 1 colonna per schermi molto piccoli */
         gap: 0.5rem; /* Stessa cosa qui, ridotto lo spazio tra le card */
@@ -43,8 +44,8 @@
 }
 
 .card {
-    background: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: var(--catlist-card-background);
+    box-shadow: 0 4px 6px var(--catlist-card-background);
     border-radius: 10px;
     padding: 1.5rem;
     text-align: left;
@@ -69,12 +70,12 @@
 
 .details {
     margin-top: 0.5rem;
-    color: #6b7280;
+    color: var(--catlist-card-description);
     list-style: none;
     padding: 0;
 }
 
 .description {
     margin-top: 1rem;
-    color: #6b7280;
+    color: var(--catlist-card-description);
 }

@@ -24,7 +24,7 @@
     font-size: var(--lg-body-fs);
     margin-bottom: 39px;
   }
-  @media (min-width: 768px) {
+  @media (min-width: $media-tablet) {
     align-items: flex-start;
     text-align: left;
     margin: 0 0 0 58px;

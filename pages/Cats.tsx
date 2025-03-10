@@ -20,7 +20,7 @@ const client = sanityClient({
 
 export default function Cats() {
     return (
-        <div className="bg-gray-100 text-gray-900">
+        <div className="">
 
             {/* Navbar */}
             <div><Navbar /></div>

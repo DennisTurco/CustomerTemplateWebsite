@@ -9,12 +9,12 @@
   top: 0;
   left: 0;
   right: 0;
-  background-color: var(--light-cream-100);
+  background-color: var(--navbar-background);
   z-index: 3;
   opacity: 1;
   transition: opacity 0.3s ease;
 
-  @media (min-width: 768px) { /* Tablet and larger */
+  @media (min-width: $media-tablet) { /* Tablet and larger */
     margin: 0 auto;
     padding: 17px 40px;
   }
@@ -56,7 +56,7 @@
   bottom: 0;
   width: 100vw;
   height: 90vh;
-  background-color: rgba(0, 0, 0, 0.8); /* Dark background for menu */
+  background-color: var(--navbar-background-shadow); /* Dark background for menu */
   display: none; /* Initially hidden */
 
   &.showMenu {
@@ -78,12 +78,9 @@
     font-size: 24px;
     font-family: "Fraunces", serif;
     font-weight: 900;
-    color: var(--dark-greyblue-900);
+    color: var(--navbar-a);
     margin-bottom: 32px;
     transition: color 0.3s ease;
-    &:hover {
-      color: var(--primary-color); /* Add hover effect */
-    }
   }
 }
 
@@ -97,10 +94,10 @@
 .logoText {
   font-size: 1.2rem;
   font-weight: bold;
-  color: var(--dark-greyblue-900);
+  color: var(--navbar-logo-text);
 }
 
-@media (min-width: 768px) { /* Adjust for larger screens */
+@media (min-width: $media-tablet) { /* Adjust for larger screens */
   .menu_container {
     display: none; /* Don't show the menu on large screens */
   }

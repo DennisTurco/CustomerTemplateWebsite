@@ -32,8 +32,12 @@ const Why = ({ whyData, fadeIn, client }) => {
       viewport={{ once: true }}
     >
       <div className={styles.why_text_content}>
-        <h2>{whyData.title}</h2>
-        <p>{whyData.description}</p>
+        <div className={styles.why_text_content_title}>
+          <h2>{whyData.title}</h2>
+        </div>
+        <div className={styles.why_text_content_description}>
+          <p>{whyData.description}</p>
+        </div>
       </div>
       <div className={styles.why_card_container}>
         {whyData.data.map((data, key) => (
