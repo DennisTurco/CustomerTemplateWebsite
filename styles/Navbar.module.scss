@@ -56,7 +56,7 @@
   bottom: 0;
   width: 100vw;
   height: 90vh;
-  background-color: var(--navbar-background-shadow); /* Dark background for menu */
+  background-color: var(--navbar-shadow); /* Dark background for menu */
   display: none; /* Initially hidden */
 
   &.showMenu {
@@ -78,7 +78,7 @@
     font-size: 24px;
     font-family: "Fraunces", serif;
     font-weight: 900;
-    color: var(--navbar-a);
+    color: var(--navbar-link);
     margin-bottom: 32px;
     transition: color 0.3s ease;
   }
@@ -94,7 +94,7 @@
 .logoText {
   font-size: 1.2rem;
   font-weight: bold;
-  color: var(--navbar-logo-text);
+  color: var(--navbar-text);
 }
 
 @media (min-width: $media-tablet) { /* Adjust for larger screens */

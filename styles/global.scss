@@ -13,50 +13,65 @@
   --background: #f1f1f1;
   --foreground: #000000;
 
-  --dark-greyblue-900: #333d4b;
-  --dark-cyan-600: #0e8784;
-  --light-cyan-600: #00b8b8;
-  --medium-grey-400: #83888f;
-  --light-orange-200: #fdd6ba;
-  --light-cream-100: #fefcf7;
-  --yellow-thunder-500: #f9d851;
-  --catslist-title-color: #16a34a;
-  --catslist-subtitle-color: #6b7280;
-  --catslist-card-description: #6b7280;
-  --catslist-card-background: #ffffff;
-  --catslist-card-boxshadow: rgba(0, 0, 0, 0.1);
-  --menu-title-color: #16a34a;
-  --menu-card-background: #fefcf7;
-  --menu-card-boxshadow: rgba(0, 0, 0, 0.1);
-  --menu-description: #83888f;
-  --menu-price: #00b8b8;
-  --menu-allergen-card-background: #fefcf7;
-  --menu-allergen-card-boxshadow: rgba(0, 0, 0, 0.1);
-  --services-card-background: #0e8784;
-  --services-card-text: #fefcf7;
-  --services-title: #6b7280;
-  --services-description: #6b7280;
-  --footer-background: #222;
-  --footer-fontcolor: #ffffff;
-  --footer-social-fontcolor: #ffffff;
-  --footer-a: #ffffff;
-  --footer-a-hover: #f4a261;
-  --copyright-background: rgba(255, 255, 255, 0.1);
-  --copyright-a: #f4a261;
-  --navbar-background: #fefcf7;
-  --navbar-background-shadow: rgba(0, 0, 0, 0.8);
-  --navbar-logo-text: #333d4b;
-  --navbar-a: #333d4b;
-  --hero-background-gradient1: #f7c6c3;
-  --hero-background-gradient2: #e5b0a7;
-  --hero-title: #333;
-  --hero-phone: #333;
-  --hero-description: #333;
-  --hero-button-background: #ff8a00;
-  --hero-button-background-hover: #e67e00;
+  /* === Palette Generale === */
+  --background: #f1f1f1;
+  --foreground: #000000;
+  --dark-greyblue: #333d4b;
+  --dark-cyan: #0e8784;
+  --light-cyan: #00b8b8;
+  --medium-grey: #83888f;
+  --light-orange: #fdd6ba;
+  --light-cream: #fefcf7;
+  --yellow-thunder: #f9d851;
+
+  /* === Navbar === */
+  --navbar-background: var(--light-cream);
+  --navbar-shadow: rgba(0, 0, 0, 0.8);
+  --navbar-text: var(--dark-greyblue);
+  --navbar-link: var(--dark-greyblue);
+
+  /* === Hero Section === */
+  --hero-bg-gradient-1: #f7c6c3;
+  --hero-bg-gradient-2: #e5b0a7;
+  --hero-text: #333;
+  --hero-button-bg: #ff8a00;
+  --hero-button-hover: #e67e00;
   --hero-button-text: white;
-  --hero-button-boxshadow: rgba(0, 0, 0, 0.2);
-  --hero-scrolldownarrow: #222222;
+  --hero-button-shadow: rgba(0, 0, 0, 0.2);
+  --hero-scroll-arrow: #222;
+
+  /* === Menu === */
+  --menu-title: #16a34a;
+  --menu-card-bg: var(--light-cream);
+  --menu-card-shadow: rgba(0, 0, 0, 0.1);
+  --menu-description: var(--medium-grey);
+  --menu-price: var(--light-cyan);
+  --menu-allergen-bg: var(--light-cream);
+  --menu-allergen-shadow: rgba(0, 0, 0, 0.1);
+
+  /* === Categoria Lista === */
+  --cats-title: #16a34a;
+  --cats-subtitle: #6b7280;
+  --cats-card-desc: #6b7280;
+  --cats-card-bg: #ffffff;
+  --cats-card-shadow: rgba(0, 0, 0, 0.1);
+
+  /* === Servizi === */
+  --services-card-bg: var(--dark-cyan);
+  --services-card-text: var(--light-cream);
+  --services-title: var(--medium-grey);
+  --services-description: var(--medium-grey);
+
+  /* === Footer === */
+  --footer-bg: #222;
+  --footer-text: #ffffff;
+  --footer-links: #ffffff;
+  --footer-links-hover: #f4a261;
+  --footer-social: #ffffff;
+
+  /* === Copyright === */
+  --copyright-bg: rgba(255, 255, 255, 0.1);
+  --copyright-link: #f4a261;
 
 
   --grey-muted: #999691;  /* A muted grey */
