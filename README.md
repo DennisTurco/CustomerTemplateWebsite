@@ -14,7 +14,7 @@
     1. ✅ TypeScript (Recommended)
     2. ✅ ESLint
     3. ❌ No to Tailwind (we’ll install it manually)
-2. Navigate to your project folder: `cd catcafe`
+2. Navigate to your project folder: `cd projectname`
 
 ## Start the Development Server
 1. Once installed, start the Next.js app with: npm run dev
@@ -22,8 +22,8 @@
 
 ## Install Tailwind CSS (Optional, but Recommended) 
 To add Tailwind CSS, run:
-1. npm install -D tailwindcss postcss autoprefixer
-2. npx tailwindcss init -p
+1. `npm install tailwindcss@3.4.1 postcss autoprefixer -D`
+2. `npx tailwindcss init -p`
 3. Modify tailwind.config.js and add the Next.js file paths:
     ```js
     /** @type {import('tailwindcss').Config} */
