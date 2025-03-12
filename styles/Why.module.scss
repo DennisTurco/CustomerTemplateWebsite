@@ -70,12 +70,16 @@
   }
 }
 
-.why_text_content_title {
+.title {
   color: var(--services-title);
+  font-size: 2.25rem; // 4xl
+  font-weight: 800;
 }
 
-.why_text_content_description {
+.text {
   color: var(--services-description);
+  font-size: 1.125rem; // lg
+  margin-top: 1rem;
 }
 
 .why_card_container {
