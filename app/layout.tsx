@@ -1,6 +1,4 @@
 import { GeistSans } from "geist/font/sans";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next"
 import Script from "next/script";
 import "../styles/global.scss";
 
@@ -77,11 +75,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
       </head>
       <body className={GeistSans.className} suppressHydrationWarning={true}>
         {children}
-        {/* Vercel Analytics */}
-        <Analytics />
-
-        {/* Vercel Speed insight */}
-        <SpeedInsights/>
       </body>
     </html>
   );

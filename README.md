@@ -52,6 +52,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 * `npm i geist`
 * `npm i @vercel/analytics`
 * `npm i @vercel/speed-insights`
+* `npm install @emailjs/browser`
+* `npm install aos`
 
 ## Sanity Configuration
 * Check if sanity is installed: `sanity --version` or `npx sanity --version`
