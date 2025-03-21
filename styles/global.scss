@@ -1,11 +1,11 @@
 @use "reset" as *;
 @use "resolution" as *;
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Fraunces:wght@900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Fraunces:wght@900&display=swap");
 
 :root {
   // Definizione delle variabili PRIMA degli annidamenti
@@ -14,8 +14,9 @@
 
   /* === Palette Base === */
   --primary: #24958f;         /* Teal-like green */
-  --accent: #3fbbaf;          /* Minty teal */
+  --accent: #3fbbafce;          /* Minty teal */
   --background: #e5e7dc;      /* Light grey with a beige tint */
+  --background-alternative: #cbcdc3;      /* Light grey with a beige tint */
   --foreground: #11111b;      /* Very dark grey, almost black */
   --light: #ffffff;           /* Bianco puro */
   --dark: #11111b;            /* Very dark grey, almost black */
@@ -27,13 +28,13 @@
   --navbar-shadow: var(--shadow);
 
   /* === Hero Section === */
-  --hero-bg: var(--primary); /* Usa solo il colore primario per l'hero */
+  --hero-bg: var(--primary);
   --hero-text: var(--foreground);
   --hero-button-bg: var(--accent);
   --hero-button-hover: var(--primary);
   --hero-button-text: var(--light);
   --hero-button-shadow: var(--shadow);
-  --hero-scroll-arrow: var(--dark);
+  --hero-scroll-arrow: var(--light);
 
   /* === About Us === */
   --about-bg: var(--background);
@@ -42,27 +43,42 @@
 
   /* === Menu === */
   --menu-title: var(--foreground);
+  --menu-description: var(--primary); 
+  --menu-card-title: var(--foreground);
+  --menu-card-subtitle: var(--primary);
   --menu-card-bg: var(--light);
   --menu-card-shadow: var(--shadow);
-  --menu-description: var(--foreground); /* Rimosso colore secondario per i descrittivi */
+  --menu-card-description: var(--foreground);
   --menu-price: var(--primary);
   --menu-allergen-bg: var(--light);
 
-  /* === Categoria Lista === */
+  /* === Gatti === */
   --cats-title: var(--foreground);
+  --cats-subtitle: var(--primary); 
+  --cats-card-title: var(--foreground); 
+  --cats-card-subtitle: var(--primary); 
+  --cats-card-desc: var(--foreground); 
   --cats-card-bg: var(--light);
   --cats-card-shadow: var(--shadow);
 
   /* === Servizi === */
+  --services-bg: var(--background-alternative);
   --services-card-bg: var(--primary);
   --services-card-text: var(--light);
   --services-title: var(--foreground);
   --services-description: var(--foreground);
+  --services-bg-gradient-1: var(--accent); 
+  --services-bg-gradient-2: var(--primary);
 
   /* === Find Us === */
   --findus-bg-gradient-1: var(--dark); 
   --findus-bg-gradient-2: var(--primary);
   --findus-text: var(--light);
+
+  /* == Chiamami Button == */
+  --chiamami-bg: #4CAF50;
+  --chiamami-text: var(--light);
+  --chiamami-bg-hover: #45a049;
 
   /* === Footer === */
   --footer-bg: var(--dark);
@@ -74,13 +90,9 @@
   --copyright-bg: rgba(255, 255, 255, 0.1);
   --copyright-link: var(--accent);
 
-  
-
-  // --grey-muted: #999691;  /* A muted grey */
-  // --light-grey-beige: #e5e7dc;  /* Light grey with a beige tint */
-  // --dark-charcoal: #11111b;  /* A very dark grey, almost black */
-  // --teal-green: #24958f;  /* A teal-like green */
-  // --mint-teal: #3fbbaf;  /* A minty teal */
+  /* === Divider === */
+  --divider-gradient-1: var(--primary); 
+  --divider-gradient-2: var(--accent);
 
   --xl-header-fs: 40px;
   --md-header-fs: 28px;

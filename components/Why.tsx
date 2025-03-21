@@ -1,18 +1,47 @@
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import styles from "../styles/Why.module.scss";
-import imageUrlBuilder from '@sanity/image-url';
+import imageUrlBuilder from "@sanity/image-url";
+import { SanityClient } from "@sanity/client";
+import { WhyData } from "../components/types";
 
+interface WhyCardProps {
+  title: string;
+  image?: {
+    asset?: { 
+      _ref?: string;
+      url?: string;
+    };
+  };
+  description: string;
+  altText?: string; 
+  client: SanityClient;
+}
 
-const WhyCard = ({ title, image, description, altText, client }) => {
+const WhyCard: React.FC<WhyCardProps> = ({ title, image, description, altText, client }) => {
   const builder = imageUrlBuilder(client);
-  const urlFor = (source) => builder.image(source).url();
-  const imageUrl = urlFor(image.asset); // Ottieni la URL dell'immagine dal riferimento
-  
+
+  const urlFor = (source: { asset?: { _ref?: string; url?: string } }) => {
+    if (source.asset?._ref) {
+      const imageUrl = builder.image(source).url();
+      return imageUrl;
+    }
+    console.log("No URL or _ref found in the asset");
+    return "";  
+  };
+
+  const imageUrl = image ? urlFor(image) : "";
+
+  console.log("Image URL in WhyCard: ", imageUrl);  // Log the image URL for debugging
+
   return (
     <div className={styles.container}>
       <div className={styles.image_box}>
-        <Image src={imageUrl} alt={altText} width={300} height={200} className={styles.image} />
+        {imageUrl ? (
+          <Image src={imageUrl} alt={altText || "Image"} width={250} height={170} className={styles.image} loading="lazy" />
+        ) : (
+          <div>No Image Available</div>
+        )}
       </div>
       <div className={styles.text_content}>
         <h3>{title}</h3>
@@ -22,7 +51,13 @@ const WhyCard = ({ title, image, description, altText, client }) => {
   );
 };
 
-const Why = ({ whyData, fadeIn, client }) => {
+interface WhyProps {
+  whyData: WhyData;
+  fadeIn: Variants;
+  client: SanityClient;
+}
+
+const Why: React.FC<WhyProps> = ({ whyData, fadeIn, client }) => {
   return (
     <motion.section
       className={styles.why_container}

@@ -24,23 +24,10 @@
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colonne */
-    gap: 0.5rem; /* Riduci lo spazio tra le card */
+    grid-template-columns: repeat(3, minmax(300px, 1fr)); 
+    gap: 0.5rem;
     margin-top: 2rem;
-}
-
-@media (max-width: $media-tablet) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 colonne per schermi più piccoli */
-        gap: 0.5rem; /* Mantieni uno spazio ravvicinato anche sui dispositivi più piccoli */
-    }
-}
-
-@media (max-width: $media-mobile) {
-    .grid {
-        grid-template-columns: 1fr; /* 1 colonna per schermi molto piccoli */
-        gap: 0.5rem; /* Stessa cosa qui, ridotto lo spazio tra le card */
-    }
+    justify-content: center; 
 }
 
 .card {
@@ -49,33 +36,61 @@
     border-radius: 10px;
     padding: 1.5rem;
     text-align: left;
-    max-width: 320px; /* Set a maximum width for the card */
-    margin: 0 auto; /* Center the card inside the grid */
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
 }
 
 .image {
     border-radius: 10px;
     width: 100%;
     height: auto;
-    max-width: 300px; /* Max width of the image */
-    max-height: 200px; /* Max height of the image */
-    object-fit: cover; /* Ensure the image is cropped and doesn't stretch */
+    max-height: 200px;
+    object-fit: cover;
 }
 
 .name {
     margin-top: 1rem;
     font-size: 1.5rem;
     font-weight: bold;
+    color: var(--cats-card-title); /* Variabile aggiornata */
 }
 
 .details {
     margin-top: 0.5rem;
-    color: var(---cats-card-desc);
+    color: var(--cats-card-subtitle); /* Usa il colore giusto */
     list-style: none;
     padding: 0;
 }
 
+.details li {
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--cats-card-subtitle); /* Assicurati che il colore venga applicato */
+}
 .description {
     margin-top: 1rem;
     color: var(--cats-card-desc);
+}
+
+.cardSubtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--cats-card-subtitle);
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: $media-tablet) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: $media-mobile) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
 }

@@ -1,9 +1,9 @@
 "use client";
 import styles from '../styles/Cats.module.scss';
+import { SanityClient } from "@sanity/client";
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
-// Definizione del tipo di dati
 interface Gatto {
   _id: string;
   nome?: string;
@@ -13,20 +13,30 @@ interface Gatto {
   descrizione?: string;
 }
 
-export default function CatsSection({ client }) {
-  const [gatti, setGatti] = useState<Gatto[]>([]);
+interface SezioneGatti {
+  name?: string;
+  description?: string;
+  data?: Gatto[];
+}
+
+interface CatsSectionProps {
+  client: SanityClient;
+}
+
+export default function CatsSection({ client }: CatsSectionProps) {
+  const [sezione, setSezione] = useState<SezioneGatti | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     client
-      .fetch(`*[_type == "gatti"]{_id, data[]{nome, sesso, eta, foto{asset->{url}}, descrizione}}`)
+      .fetch(`*[_type == "gatti"]{name, description, data[]{_id, nome, sesso, eta, foto{asset->{url}}, descrizione}}`)
       .then((data) => {
-        console.log("Dati ricevuti:", data); // Controlla il formato dei dati in console
+        console.log("Dati ricevuti:", data);
         if (data.length > 0) {
-          setGatti(data[0].data || []); // Prendi l'array `data` dal primo documento
+          setSezione(data[0]); 
         } else {
-          setGatti([]); // Nessun gatto disponibile
+          setSezione({ name: "Gatti Disponibili", description: "Non ci sono gatti disponibili", data: [] });
         }
         setLoading(false);
       })
@@ -43,14 +53,14 @@ export default function CatsSection({ client }) {
   return (
     <section className={styles.gattiSection}>
       <div className={styles.container}>
-        <h2 className={styles.title}>I Nostri Gatti</h2>
-        <p className={styles.subtitle}>Incontra alcuni dei gatti disponibili per l'adozione!</p>
+        <h2 className={styles.title}>{sezione?.name ?? "I Nostri Gatti"}</h2>
+        <p className={styles.subtitle}>{sezione?.description ?? "Incontra alcuni dei gatti disponibili per l'adozione!"}</p>
 
-        {gatti.length === 0 ? (
+        {sezione?.data && sezione.data.length === 0 ? (
           <p className={styles.noCats}>Al momento non ci sono gatti disponibili.</p>
         ) : (
           <div className={styles.grid}>
-            {gatti.map((gatto) => (
+            {sezione?.data?.map((gatto) => (
               <div key={gatto._id} className={styles.card}>
                 {gatto.foto?.asset?.url ? (
                   <Image
@@ -59,15 +69,19 @@ export default function CatsSection({ client }) {
                     height={200}
                     alt={gatto.nome || "Gatto senza nome"}
                     className={styles.image}
+                    priority
                   />
                 ) : (
                   <div className={styles.noImage}>Immagine non disponibile</div>
                 )}
                 <h3 className={styles.name}>{gatto.nome ?? "Nome non disponibile"}</h3>
+
+                {/* Ritorno alla lista per una formattazione chiara */}
                 <ul className={styles.details}>
                   <li><strong>Sesso:</strong> {gatto.sesso ?? "Non disponibile"}</li>
                   <li><strong>Età:</strong> {gatto.eta ?? "Non disponibile"}</li>
                 </ul>
+
                 <p className={styles.description}>
                   {gatto.descrizione ?? "Nessuna descrizione disponibile."}
                 </p>

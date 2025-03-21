@@ -1,8 +1,8 @@
 import { NextResponse } from 'next/server';
 
 export function middleware(request: Request) {
-  const username = process.env.STUDIO_USERNAME || 'admin';
-  const password = process.env.STUDIO_PASSWORD || 'password123';
+  const username = process.env.STUDIO_USERNAME;
+  const password = process.env.STUDIO_PASSWORD;
   const authHeader = request.headers.get('Authorization');
 
   // If the Authorization header is missing or incorrect, return 401 with WWW-Authenticate

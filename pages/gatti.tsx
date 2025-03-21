@@ -1,7 +1,7 @@
 import "/styles/global.scss"
 import { Navbar } from "../components/NavBar";
 import { Footer } from "../components/Footer";
-import Hero from "../components/Hero2";
+import Hero from "../components/Hero";
 import CatsSection from "../components/CatsSection";
 import { motion } from "framer-motion";
 import sanityClient from "@sanity/client";
@@ -30,7 +30,7 @@ export default function Cats() {
 
             {/* Menu list */}
             <motion.div initial="hidden" whileInView="visible" variants={fadeIn} viewport={{ once: true }}>
-                <CatsSection client={client} />
+              <CatsSection client={client} />
             </motion.div>
 
             {/* Footer */}

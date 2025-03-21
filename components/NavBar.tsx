@@ -1,61 +1,59 @@
-import styles from "../styles/Navbar.module.scss";
-import React, { useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { GrFormClose } from "react-icons/gr";
-import Contacts from "../components/Contact";
+import Image from "next/image";
+import styles from "../styles/Navbar.module.scss";
+import ChiamamiButton from "./ChiamamiButton";
 
 export const Navbar: React.FC = () => {
     const [hamburgerClicked, setHamburgerClicked] = useState(false);
-    const [isPopupVisible, setIsPopupVisible] = useState(false);
-
-    const openPopup = () => {
-        setIsPopupVisible(true);
-    };
-
-    const closePopup = () => {
-        setIsPopupVisible(false);
-    };
 
     return (
         <header className={styles.container}>
             <Link href="/" className={styles.logoContainer}>
-                <img src="/images/logo.png" alt="logo" className={styles.logo} />
+                <Image 
+                    src="/images/logo.png" 
+                    alt="logo"
+                    width={150} 
+                    height={50} 
+                    className={styles.logo}
+                    priority
+                />
                 <span className={styles.logoText}>Fusa & Caffè</span>
             </Link>
 
             <div className={styles.link_container}>
                 <Link href="/"> Home </Link>
-                <Link href="/Menu"> Menu </Link>
-                <Link href="/Cats"> Gatti </Link>
-                {/* <Link href="/Projects"> Progetti </Link> */}
+                <Link href="/menu"> Menu </Link>
+                <Link href="/gatti"> Gatti </Link>
+                <ChiamamiButton />
             </div>
 
-            {hamburgerClicked ? (
-                <GrFormClose
-                    className={styles.hamburger}
-                    onClick={() => setHamburgerClicked(!hamburgerClicked)}
-                />
-            ) : (
+            {!hamburgerClicked ? (
                 <GiHamburgerMenu
                     className={styles.hamburger}
-                    onClick={() => setHamburgerClicked(!hamburgerClicked)}
+                    onClick={() => setHamburgerClicked(true)}
                 />
-            )}
+            ) : null}
 
             <div
                 className={`${styles.menu_container} ${hamburgerClicked ? styles.showMenu : ''}`}
+                onClick={() => setHamburgerClicked(false)} // Chiude il menu al click fuori
             >
-                <div className={styles.menu_links_container}>
+                {/* Icona di chiusura dentro il menu per essere visibile */}
+                <GrFormClose
+                    className={styles.closeIcon}
+                    onClick={() => setHamburgerClicked(false)}
+                />
+
+                <div className={styles.menu_links_container} onClick={(e) => e.stopPropagation()}>
+                    <ChiamamiButton />
                     <Link href="/" onClick={() => setHamburgerClicked(false)}> Home </Link>
-                    <Link href="/Menu" onClick={() => setHamburgerClicked(false)}> Menu </Link>
-                    <Link href="/Cats" onClick={() => setHamburgerClicked(false)}> Gatti </Link>
-                    {/* <Link href="#" onClick={(e) => { e.preventDefault(); openPopup(); }}> Contattaci </Link> */}
+                    <Link href="/menu" onClick={() => setHamburgerClicked(false)}> Menu </Link>
+                    <Link href="/gatti" onClick={() => setHamburgerClicked(false)}> Gatti </Link>
                 </div>
             </div>
-
-            {/* Popup Contatti */}
-            <Contacts isOpen={isPopupVisible} closePopup={closePopup} />
         </header>
     );
 };
