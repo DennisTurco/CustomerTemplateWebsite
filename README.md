@@ -44,7 +44,7 @@ To add Tailwind CSS, run:
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Packages
+## Packages 
 * `npm install react-icons`
 * `npm install sass`
 * `npm install -g @sanity/client`
