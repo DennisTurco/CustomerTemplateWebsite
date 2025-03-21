@@ -27,5 +27,6 @@ export function middleware(request: Request) {
 }
 
 export const config = {
-  matcher: ['/studio/:path*'],
+  // matcher: ['/studio/:path*'],
+  matcher: ['/perrcorso_da_proteggere'],
 };
