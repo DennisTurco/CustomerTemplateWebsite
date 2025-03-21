@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import styles from "/styles/Contact.module.scss";
+import styles from "../styles/Contact.module.scss";
 
 interface ContactsProps {
     isOpen: boolean;

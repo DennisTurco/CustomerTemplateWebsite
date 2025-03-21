@@ -48,10 +48,10 @@ const HeroSection = () => {
           data-aos-easing="ease-in-out"
           data-aos-once="true"
         >
-          <Link href="/menu">
+          <Link href="./menu">
             <button className={styles.button}>Menu</button>
           </Link>
-          <Link href="/gatti">
+          <Link href="./gatti">
             <button className={styles.button}>Gatti</button>
           </Link>
         </span>

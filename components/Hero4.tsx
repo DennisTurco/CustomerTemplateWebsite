@@ -10,7 +10,7 @@ export const HeroSection = () => {
       <div className={styles.heroContent}>
         {/* Aggiungi la gif sopra la scritta principale */}
         <div className={styles.gifContainer}>
-          <img src="/gifs/gattoCaffe.gif" alt="Gatto che beve caffè" className={styles.gifImage} />
+          <img src="./gifs/gattoCaffe.gif" alt="Gatto che beve caffè" className={styles.gifImage} />
         </div>
 
         {/* Testo centrato */}

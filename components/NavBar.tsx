@@ -13,7 +13,7 @@ export const Navbar: React.FC = () => {
         <header className={styles.container}>
             <Link href="/" className={styles.logoContainer}>
                 <Image 
-                    src="/images/logo.png" 
+                    src="./images/logo.png" 
                     alt="logo"
                     width={150} 
                     height={50} 
@@ -25,8 +25,8 @@ export const Navbar: React.FC = () => {
 
             <div className={styles.link_container}>
                 <Link href="/"> Home </Link>
-                <Link href="/menu"> Menu </Link>
-                <Link href="/gatti"> Gatti </Link>
+                <Link href="./menu"> Menu </Link>
+                <Link href="./gatti"> Gatti </Link>
                 <ChiamamiButton />
             </div>
 
@@ -50,8 +50,8 @@ export const Navbar: React.FC = () => {
                 <div className={styles.menu_links_container} onClick={(e) => e.stopPropagation()}>
                     <ChiamamiButton />
                     <Link href="/" onClick={() => setHamburgerClicked(false)}> Home </Link>
-                    <Link href="/menu" onClick={() => setHamburgerClicked(false)}> Menu </Link>
-                    <Link href="/gatti" onClick={() => setHamburgerClicked(false)}> Gatti </Link>
+                    <Link href="./menu" onClick={() => setHamburgerClicked(false)}> Menu </Link>
+                    <Link href="./gatti" onClick={() => setHamburgerClicked(false)}> Gatti </Link>
                 </div>
             </div>
         </header>

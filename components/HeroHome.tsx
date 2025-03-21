@@ -11,7 +11,7 @@ export const HeroSection = () => {
         {/* Aggiungi la gif sopra la scritta principale */}
         <div className={styles.gifContainer}>
           <Image
-            src="/gifs/gattoCaffe.gif"
+            src="./gifs/gattoCaffe.gif"
             alt="Gatto che beve caffè"
             className={styles.gifImage}
             width={400} 
@@ -29,10 +29,10 @@ export const HeroSection = () => {
             Un angolo accogliente dove gustare un buon caffè e rilassarti in compagnia dei nostri gatti.
           </p>
           <div className={styles.buttonsContainer}>
-            <Link href="/menu">
+            <Link href="./menu">
               <button className={styles.button}>Menu</button>
             </Link>
-            <Link href="/gatti">
+            <Link href="./gatti">
               <button className={styles.button}>Gatti</button>
             </Link>
           </div>

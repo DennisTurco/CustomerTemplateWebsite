@@ -2,7 +2,7 @@ import { GeistSans } from "geist/font/sans";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import Script from "next/script";
-import "/styles/global.scss";
+import "../styles/global.scss";
 
 // Definizione dei metadati
 export const metadata = {
@@ -53,7 +53,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="it">
       <head>
         {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="./favicon.ico" />
 
         {/* JSON-LD Structured Data */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />

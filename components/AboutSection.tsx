@@ -47,7 +47,7 @@ function AboutSection({ aboutData, fadeIn }: AboutSectionProps) {
             {index === 0 && (
               <div className="absolute top-[-72px] left-1/2 transform -translate-x-1/2">
                 <Image
-                  src="/gifs/catAnim.gif" 
+                  src="./gifs/catAnim.gif" 
                   alt="cat"
                   width={240} 
                   height={192} 

@@ -12,7 +12,7 @@ export const Footer = () => {
             <Link href="/" className="flex flex-col items-center"> 
                 Fusa & Caffè
                 <Image 
-                    src="/images/logo.png" 
+                    src="./images/logo.png" 
                     alt="logo" 
                     width={80} 
                     height={80}
@@ -23,8 +23,8 @@ export const Footer = () => {
 
             <div className={styles.links_container}>
                 <Link href="/">HOME</Link>
-                <Link href="/menu">MENU</Link>
-                <Link href="/gatti">GATTI</Link>
+                <Link href="./menu">MENU</Link>
+                <Link href="./gatti">GATTI</Link>
             </div>
 
             <div className={styles.social_container}>

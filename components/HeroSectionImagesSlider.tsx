@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import styles from "../styles/HeroSection.module.scss";
 
 const images = [
   '/images/banner2.jpg',
