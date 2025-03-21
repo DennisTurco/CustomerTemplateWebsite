@@ -2,21 +2,13 @@ import "../styles/global.scss"
 import { Navbar } from "../components/NavBar";
 import { Footer } from "../components/Footer";
 import Hero from "../components/Hero";
-import CatsSection from "../components/CatsSection";
-import { motion } from "framer-motion";
-import sanityClient from "@sanity/client";
+// import CatsSection from "../components/CatsSection";
+// import { motion } from "framer-motion";
 
-const fadeIn = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
-};
-
-const client = sanityClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "lif3os8u",
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || "production",
-  apiVersion: '2024-03-10',
-  useCdn: true,
-});
+// const fadeIn = {
+//   hidden: { opacity: 0, y: 50 },
+//   visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+// };
 
 export default function Cats() {
     return (
@@ -29,9 +21,9 @@ export default function Cats() {
             <section><Hero imagePath={'/images/catsBanner.jpg'} title={""} /></section>
 
             {/* Menu list */}
-            <motion.div initial="hidden" whileInView="visible" variants={fadeIn} viewport={{ once: true }}>
+            {/* <motion.div initial="hidden" whileInView="visible" variants={fadeIn} viewport={{ once: true }}>
               <CatsSection client={client} />
-            </motion.div>
+            </motion.div> */}
 
             {/* Footer */}
             <div> <Footer /> </div>
